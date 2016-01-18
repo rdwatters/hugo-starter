@@ -1,11 +1,11 @@
 # Hugo Starter with Gulp Asset Pipeline
 
-I put together this starter kit to provide some basic boiler plate for creating static sites with [Hugo](https://gohugo.io/). If you are confused about the current architecture of the starter, every HTML includes thorough comments. For more detailed information on the Gulp Asset Pipeline, see the `README.md` in the `assets` folder.
+I put together this starter kit to provide some basic boiler plate for creating static sites with [Hugo](https://gohugo.io/). If you are confused about the current architecture of the starter, every HTML includes thorough comments. For more detailed information on the Gulp Asset Pipeline, see the [README in the `assets` folder](https://github.com/rdwatters/hugo-starter/tree/master/assets).
 
 ### Requirements
 
 * Hugo. If you don't already have the binary, [here are the directions for installation](https://gohugo.io/overview/installing/).
-* Node.js. If not, [here is the installer page](https://nodejs.org/en/download/). Installation from the Node.js website includes NPM, which you will need for installation of all gulp-related tasks (ie, building assets). 
+* Node.js. If you don't have node.js install, you can download and install it  [from the installer page](https://nodejs.org/en/download/). Installation from the Node.js website includes NPM, which you will need for installation of all js development dependencies. 
 
 ### Getting Started
 
@@ -15,6 +15,7 @@ From the command line, `cd` into the directory where you would like to build you
 * `cd hugo-starter && hugo serve`
 * (New Tab) `cd assets/ && npm install`
 * `gulp`
+* Open your browser to `localhost:1313`. You should see an `<h1>` with "Ryan's Hugo Starter Kit" and a series of 7 Social icons on the bottom left of the page.
 
 ### Gulp Asset Pipeline (See README in `assets/` for more details)
 
@@ -25,20 +26,20 @@ From the command line, `cd` into the directory where you would like to build you
 
 ### Global Partials
 
-* Create your pages with `{{ partial "global_head.html" }}` and `{{ partial "global_foot.html" }}` on all single or list layouts. 
-* Global partials include favicons, global navigation and site header, metadata (including OGP for Social Sharing), search form, site footer, site copyright, footer navigation, and stylesheets via external call or embedding via critical render path (a boolean set in `config.toml`; see the config file for more details).
-* Site scripts with conditional templating for page-level additions.
+* Create your pages with `{{ partial "global_head.html" }}` and `{{ partial "global_foot.html" }}` on all single or list layouts 
+* Global partials include favicons, global navigation and site header, metadata (including OGP for Social Sharing), search form, site footer, site copyright, footer navigation, and stylesheets via external call or embedding via critical render path (a boolean set in `config.toml`; see the config file for more details)
+* Site scripts with conditional templating for page-level additions
 
 ### `temp` Section with `temp-stylesheets` and `alt-scripts`
 
-* `temp/` allows for singleton pages with alt stylesheets and scripts that can be created at the page level. 
-* You can use the `temp` section to create these pages with nice short URLs (see `config.toml` `[permalinks]`).
+* `temp/` allows for singleton pages with alt stylesheets and scripts that can be created at the page level 
+* You can use the `temp` section to create these pages with nice short URLs (see `config.toml` `[permalinks]`)
 
 ### `config.toml`
 
 * Disqus comments
 * Social media settings
-* Basic taxonomies (tags, categories)
+* Taxonomies (tags, categories)
 * jQuery CDN (boolean)
 * BlackFriday settings
  
