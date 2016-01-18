@@ -1,0 +1,60 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font-family;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-size: $h1-sm-screen;
+    @include MQ(M) {
+        font-size: $h1-m-screen;
+    }
+    @include MQ(L) {
+        font-size: $h1-l-screen;
+    }
+}
+
+h2 {
+    font-size: $h2-sm-screen;
+    @include MQ(M) {
+        font-size: $h2-m-screen;
+    }
+    @include MQ(L) {
+        font-size: $h2-l-screen;
+    }
+}
+
+h3 {
+    font-size: $h3-sm-screen;
+    @include MQ(M) {
+        font-size: $h3-m-screen;
+    }
+    @include MQ(L) {
+        font-size: $h3-l-screen;
+    }
+}
+
+
+h4 {
+    font-size: $h4-sm-screen;
+    @include MQ(M) {
+        font-size: $h4-m-screen;
+    }
+    @include MQ(L) {
+        font-size: $h4-l-screen;
+    }
+}
+
+h5 {
+    font-size: $h5-sm-screen;
+    @include MQ(M) {
+        font-size: $h5-m-screen;
+    }
+    @include MQ(L) {
+        font-size: $h5-l-screen;
+    }
+}

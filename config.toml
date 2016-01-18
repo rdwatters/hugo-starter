@@ -1,0 +1,53 @@
+baseurl = ""
+languageCode = "en-us"
+title = "Hugo Starter"
+buildDrafts = true
+relativeURLs = true
+canonifyurls = true
+pygmentsUseClasses = true
+MetaDataFormat = "yaml"
+watch = true
+disableLiveReload= false
+verbose = true
+
+[permalinks]
+  # The temp folder is created for one-off pages (eg, marketing and design-heavy pages that run outside other site templates). Keep in mind that all .md pages under temp still require title and date in the YAML/front matter
+  temp = "/:title/"
+
+[params]
+	AuthorName = ""
+  # BEGIN SOCIAL
+  # For each social account, use the full URL that leads to the homepage of your account/profile
+	GitHub = "https://github.com"
+  Twitter = "https://twitter.com/ryandwatters"
+  Facebook = "https://facebook.com/"
+  YouTube = "https://youtube.com"
+  GooglePlus = "https://plus.google.com/"
+  # For LinkedIn, you'll need to make sure you are using the URL for visitors, rather than the URL once you're signed into your account.
+  LinkedIn = "https://linkedin.com"
+  Instagram = "https://www.instagram.com/?hl=en"
+  Tumblr = "https://www.tumblr.com/"
+  Pinterest = "https://pinterest.com"
+  # The Copyright Year is Automatically Generated based on {{ .Site.LastChange }} and is included in layouts/partials/global_foot/site_copyright.html
+  CopyrightLine = ""
+  SiteDescription = "This is a Hugo starter kit developed by Ryan Watters"
+  # If true, the gulp build will write minified CSS to an html file titled "style-embed-for-crp-only.html" to layouts/partials that will write to a <style> tag in each html <head>. If set to false, the css is not embedded in each page but instead includes an external call to <link rel="stylesheet" href="{{.Site.BaseURL}}/css/style.min.css"> 
+  UseCRP = false
+  # Include the jQuery CDN in the <head> of your site?
+  IncludeJQ = false
+  # There are two conditions that need to be met in order for Disqus comments to be added to a page. Keeping a site variable allows you to turn off all Disqus comments at once, whereas "comments:" set to "true" or "false" on an individual markdown file allows you more granular control at the article level. The partial (layouts/partials/disqus_comments.html) is written such that localhost will not load comments during development.  
+  UseDisqus = true
+  disqusShortname = ""
+
+[blackfriday]
+	plainIDAnchors = true
+	hrefTargetBlank = true
+
+[taxonomies]
+  tag = "tags"
+  categories = "categories"
+
+
+
+
+

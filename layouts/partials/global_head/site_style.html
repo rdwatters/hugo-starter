@@ -1,0 +1,12 @@
+<!-- Critical Render Path (CRP). Setting UseCRP to true in your config.toml file write the minified style to the head of the page. Setting it to "false" will create the below link to the external, minified version of the stylesheet. For more information on CRP, go to https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en. Note that Hugo does not allow for writing to non-markup files, so the Gulp build writes the minified CSS for use in CRP to style-embed-for-crp-only.html.-->
+{{if .Site.Params.UseCRP }}
+<style>
+{{ print (partial "global_head/style-embed-for-crp-only.html" .) | safeCSS }}
+</style>
+{{ else }}
+<link rel="stylesheet" href="{{.Site.BaseURL}}/css/style.min.css">
+{{ end }}
+<!--The following will include a temp stylesheet for any one-off pages you need to creat in content/temp. Since this comes in after the CRP <style>(if you are using it) or the external stylesheet, these styles will override any of the site-wide styles you are using. These stylesheets can be included in a single .md file front matter using "temp_stylesheet:". One-off stylsheets need to be kept in static/css/temp-stylesheets. Note that these stylesheets are not part of the Gulp assets and build.-->
+{{ with .Params.temp_stylesheet }}
+<link rel="stylesheet" href="/css/temp-stylesheets/{{ . }}">
+{{ end }}

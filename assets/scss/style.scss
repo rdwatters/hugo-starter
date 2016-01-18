@@ -1,0 +1,21 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+@import 'modules/variables';
+@import 'modules/mixins';
+@import 'modules/reset';
+@import 'modules/layout';
+@import 'modules/font-face';
+@import 'modules/typography';
+@import 'modules/social-media';
+
+
+/*** Delete the following. Styling for the included homepage (layouts/index.html) in Hugo-starter.***/
+
+#main {
+	display:block;
+	width:90%;
+	max-width:700px;
+	margin-left:auto;
+	margin-right:auto;
+}
+

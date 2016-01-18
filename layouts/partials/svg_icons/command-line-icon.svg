@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="command-line-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="-181.5 190.3 136.4 127.3" style="enable-background:new -181.5 190.3 136.4 127.3;" xml:space="preserve">
+<style type="text/css">
+	.clst0{stroke:#000000;stroke-miterlimit:10;}
+	.clst1{fill:#333333;stroke:#000000;stroke-miterlimit:10;}
+	.clst2{fill:#FFFFFF;}
+	.clst3{font-family:'MyriadPro-Bold';}
+	.clst4{font-size:104px;}
+</style>
+<path class="clst0" d="M-61.7,317h-103.3c-8.8,0-16.1-10.6-16.1-23.5v-79.2c0-12.9,7.2-23.5,16.1-23.5h103.3
+	c8.8,0,16.1,10.6,16.1,23.5v79.2C-45.6,306.6-52.8,317-61.7,317z"/>
+<path class="clst1" d="M-60.4,313.2h-105.9c-6.3,0-11.4-7.5-11.4-16.8v-85.3c0-9.3,5.1-16.8,11.4-16.8h105.9c6.3,0,11.4,7.5,11.4,16.8
+	v85.1C-48.9,305.7-54,313.2-60.4,313.2z"/>
+<text transform="matrix(1 0 0 1 -174.2908 279.9691)" class="clst2 clst3 clst4">&gt;_</text>
+</svg>

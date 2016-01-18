@@ -1,0 +1,29 @@
+<!-- Standard Metadata -->
+<title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Responsive meta tag -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Open Graph Protocol http://ogp.me/ -->
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+<meta property="og:image" content="{{ if .Params.main_image }}{{.Site.BaseURL}}/images/{{.Params.main_image}}{{ else }}{{.Site.BaseURL}}/images/site-logo.png{{ end }}">
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<!-- Preconnect API. For browser compatibility, check http://caniuse.com/#feat=link-rel-preconnect -->
+<link rel="preconnect" href="{{ .Site.BaseURL }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+<!-- Add prefetch and prerender on section pages. Works especially well for articles or blog posts in a series -->
+{{ if .IsPage }} 
+	{{if .NextInSection }}
+	<link rel="prefetch" href="{{.NextInSection.Permalink}}">
+	<link rel="prerender" href="{{.NextInSection.Permalink}}">
+	{{ end }}
+	{{if .PrevInSection }}
+	<link rel="prefetch" href="{{.PrevInSection.Permalink}}">
+	<link rel="prerender" href="{{.PrevInSection.Permalink}}">
+	{{ end }}
+{{ end }}
+<!-- Generator. Let's give some love to Hugo. -->
+{{.Hugo.Generator}}

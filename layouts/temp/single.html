@@ -1,0 +1,6 @@
+<!-- The 'temp' folder is created for one-off pages that might require a short URL (ie, since the permalink in config.toml is set to /:title/ so that any temp page can be found at the root. These includes assume you want even temp pages to have the chrome of the rest of the site. If you plan on creating temp pages as stand-alone HTML files, you can create the temp page as a .md and then remove both partials below.) NOTE: The permalink is set up to reflect the title of the markdown file and not necessarily the filename of the md. If you would like the permalink to reflect the filename rather than the "title" in the page's front matter, change temp = "/:title/"  to temp = "/:filename/" in config.toml-->
+{{ partial "global_head.html" . }}
+
+{{.Content}}
+
+{{ partial "global_foot.html" . }}

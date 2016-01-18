@@ -1,0 +1,29 @@
+//Convenient Social Media Color Classes. Notice both color and fill are added so that classes can be added to embedded SVGs for quick styling.
+.twitter{ color:#00aced; fill:#00aced; }
+.github{ color:#AB5B50; fill:#000000; }
+.youtube{ color:#bb0000; fill:#bb0000; }
+.googleplus{ color:#dd4b39; fill:#dd4b39; }
+.facebook{ color:#3b5998;fill:#3b5998; }
+.rss{ color:#FF6600; fill:#FF6600; }
+.pinterest { color:#cb2027; fill:#cb2027; }
+.instagram { color:#517fa4; fill:#517fa4;  }
+.linkedin{ color:#007bb6; fill:#007bb6; }
+.vine{ color:#00bf8f; fill:#00bf8f; }
+.tumblr{ color:#32506d; fill:#32506d; }
+.vimeo{ color:#aad450; fill:#aad450; }
+.foursquare{ color:#0072b1; fill:#0072b1; }
+//Simple styles for the social media bar list (ul.site-footer-social) shown by default with the starter kit. You can remove this partial entirely or just change the styles. Note the convention on all svg icons (eg, facebook icon = id="facebook-icon", class="facebook icon" and filename = "facebook-icon.svg").
+
+//Icons do not have any embedded sizes (ie, height, width), but all svg icons have the class "icon" added to the XML, so width and height should be declared explicitly. Adding a fill color to svg.icon will override the previous brand-specific colors and apply to *all* social media icons. 
+svg.icon {
+	max-width:30px;
+	max-height:30px;
+	padding:0px;
+	border:none;
+}
+
+ul.site-footer-social {
+    li {
+        display: inline;
+    }
+}

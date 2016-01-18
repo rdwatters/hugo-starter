@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="tutorial-icon" x="0px" y="0px"
+	 viewBox="6 -6 512 512" style="enable-background:new 6 -6 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.3;enable-background:new    ;}
+	.st1{fill:url(#tube_3_);}
+	.st2{fill:url(#liquid_2_);}
+	.st3{fill:#333333;}
+	.st4{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
+	.st5{opacity:0.5;fill:#FFFFFF;enable-background:new    ;}
+	.st6{display:none;}
+	.st7{display:inline;}
+	.st8{opacity:0.1;enable-background:new    ;}
+	.st9{fill:url(#tube_4_);}
+	.st10{fill:url(#liquid_3_);}
+</style>
+<g id="logo-bg-dark">
+	<g id="test-tube">
+		<path id="shadow_2_" class="st0" d="M278.3,4.2c-0.2,0.9-0.2,1.9,0,3c0,0,3.1,20.8-0.4,30L126.7,430.1l0,0
+			c-10.8,28.9,3.7,61.1,32.5,72.2c28.8,11.1,61.1-3.2,72.5-31.8l0,0L382.8,77.5c3-7.7,19.8-22.6,19.8-22.6c0.8-0.6,1.5-1.4,1.9-2.2
+			l0.1-0.2c0.1-0.2,0.2-0.3,0.2-0.5c3.9-10.1-21.2-29.2-56.1-42.6c-34.9-13.4-66.4-16.1-70.2-6c-0.1,0.2-0.1,0.4-0.2,0.5L278.3,4.2z
+			"/>
+		
+			<linearGradient id="tube_3_" gradientUnits="userSpaceOnUse" x1="203.4126" y1="302.7431" x2="299.1578" y2="206.9979" gradientTransform="matrix(0.9138 -0.4062 -0.4062 -0.9138 123.4885 587.4774)">
+			<stop  offset="0" style="stop-color:#919191"/>
+			<stop  offset="1" style="stop-color:#FFFFFF"/>
+		</linearGradient>
+		<path id="tube_2_" class="st1" d="M273.9,0.8c-0.2,0.9-0.2,1.9,0,3c0,0,3.1,20.8-0.4,30L122.3,426.7l0,0
+			c-10.8,28.9,3.7,61.1,32.5,72.2c28.8,11.1,61.1-3.2,72.5-31.8l0,0L378.4,74.2c3-7.7,19.8-22.6,19.8-22.6c0.8-0.6,1.5-1.4,1.9-2.2
+			l0.1-0.2c0.1-0.2,0.2-0.3,0.2-0.5c3.9-10.1-21.2-29.2-56.1-42.6C309.4-7.3,278-10,274.1,0.1c-0.1,0.2-0.1,0.4-0.2,0.5L273.9,0.8z"
+			/>
+		
+			<linearGradient id="liquid_2_" gradientUnits="userSpaceOnUse" x1="167.4113" y1="229.7028" x2="225.3756" y2="171.7386" gradientTransform="matrix(0.9138 -0.4062 -0.4062 -0.9138 123.4885 587.4774)">
+			<stop  offset="0" style="stop-color:#990000"/>
+			<stop  offset="1" style="stop-color:#E80000"/>
+		</linearGradient>
+		<path id="liquid" class="st2" d="M321.3,178.6l-109,283.3l0.1,0c-8,20.3-31.4,30.9-52.2,22.9c-20.7-8-32-31.9-24.3-52.3l0,0
+			l69.6-181.1c0,0,8.7-14,25.8-24c17.1-10,31.2-7.9,50.1-16.3C300.4,202.7,321.3,178.6,321.3,178.6z"/>
+		
+			<ellipse id="top" transform="matrix(0.359 -0.9333 0.9333 0.359 192.1739 330.7883)" class="st3" cx="336.9" cy="25.5" rx="11.1" ry="42"/>
+		<path id="side-reflection" class="st4" d="M273.8,3.8c0,0,3.1,20.9-0.4,30L122.3,426.7l0,0c-10.8,28.9,3.7,61.1,32.5,72.2
+			c5,1.9,10.1,3.1,15.2,3.5c-19.4-14.6-27.8-40.8-18.8-64.6l0,0L299.3,52.7C299.3,52.7,279.1,33.8,273.8,3.8z"/>
+		<g id="bubbles">
+			<circle class="st5" cx="225.2" cy="257.3" r="4.4"/>
+			<circle class="st5" cx="253.9" cy="289" r="6.6"/>
+			<circle class="st5" cx="210.1" cy="326.7" r="12.4"/>
+			<circle class="st5" cx="190" cy="349.6" r="6.6"/>
+			<circle class="st5" cx="216.3" cy="398.6" r="4.4"/>
+		</g>
+	</g>
+</g>
+<g id="logo-bg-light" class="st6">
+	<g id="test-tube_1_" class="st7">
+		<path id="shadow_1_" class="st8" d="M275,53.2c-0.2,0.7-0.2,1.5,0,2.4c0,0,2.5,16.6-0.3,24l-121,314.6l0,0
+			c-8.6,23.1,2.9,48.9,26,57.8c23.1,8.9,49-2.5,58-25.5l0,0l121-314.6c2.4-6.2,15.9-18.1,15.9-18.1c0.7-0.5,1.2-1.1,1.6-1.8l0.1-0.1
+			c0.1-0.1,0.1-0.3,0.2-0.4c3.1-8.1-17-23.4-45-34.2c-27.9-10.7-53.1-12.9-56.3-4.8c-0.1,0.1-0.1,0.3-0.1,0.4L275,53.2z"/>
+		
+			<linearGradient id="tube_4_" gradientUnits="userSpaceOnUse" x1="215.4124" y1="292.6573" x2="292.0834" y2="215.9863" gradientTransform="matrix(0.9138 -0.4062 -0.4062 -0.9138 123.4885 587.4774)">
+			<stop  offset="0" style="stop-color:#919191"/>
+			<stop  offset="1" style="stop-color:#FFFFFF"/>
+		</linearGradient>
+		<path id="tube_1_" class="st9" d="M271.5,50.5c-0.2,0.7-0.2,1.5,0,2.4c0,0,2.5,16.6-0.3,24l-121,314.6l0,0
+			c-8.6,23.1,2.9,48.9,26,57.8c23.1,8.9,49-2.5,58-25.5l0,0l121-314.6c2.4-6.2,15.9-18.1,15.9-18.1c0.7-0.5,1.2-1.1,1.6-1.8l0.1-0.1
+			c0.1-0.1,0.1-0.3,0.2-0.4c3.1-8.1-17-23.4-45-34.2c-27.9-10.7-53.1-12.9-56.3-4.8c-0.1,0.1-0.1,0.3-0.1,0.4L271.5,50.5z"/>
+		
+			<linearGradient id="liquid_3_" gradientUnits="userSpaceOnUse" x1="186.5832" y1="234.168" x2="233" y2="187.7513" gradientTransform="matrix(0.9138 -0.4062 -0.4062 -0.9138 123.4885 587.4774)">
+			<stop  offset="0" style="stop-color:#990000"/>
+			<stop  offset="1" style="stop-color:#E80000"/>
+		</linearGradient>
+		<path id="liquid_1_" class="st10" d="M309.5,192.8l-87.3,226.9l0.1,0c-6.4,16.3-25.2,24.7-41.8,18.3
+			c-16.6-6.4-25.6-25.5-19.5-41.9l0,0l55.8-145c0,0,7-11.2,20.6-19.2c13.7-8,24.9-6.3,40.1-13.1
+			C292.7,212.2,309.5,192.8,309.5,192.8z"/>
+		
+			<ellipse id="top_1_" transform="matrix(0.359 -0.9333 0.9333 0.359 140.8627 345.531)" class="st3" cx="322" cy="70.2" rx="8.9" ry="33.6"/>
+		<path id="side-reflection_1_" class="st4" d="M271.5,52.8c0,0,2.5,16.7-0.3,24l-121,314.6l0,0c-8.6,23.1,2.9,48.9,26,57.8
+			c4,1.5,8.1,2.5,12.2,2.8c-15.6-11.7-22.2-32.6-15.1-51.7l0,0L291.8,92C291.8,92,275.7,76.8,271.5,52.8z"/>
+		<g id="bubbles_1_">
+			<circle class="st5" cx="232.5" cy="255.8" r="3.5"/>
+			<circle class="st5" cx="255.5" cy="281.2" r="5.3"/>
+			<circle class="st5" cx="220.4" cy="311.5" r="9.9"/>
+			<circle class="st5" cx="204.4" cy="329.8" r="5.3"/>
+			<circle class="st5" cx="225.4" cy="369" r="3.5"/>
+		</g>
+	</g>
+</g>
+</svg>
