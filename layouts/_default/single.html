@@ -1,10 +1,11 @@
-{{ partial "global_head.html" . }}
+{{ partial "site_head.html" . }}
 <!-- Simple starter layout for your single content files. Delete if needed.  -->
-<main id="main">
+<main class="main">
 	<article>
 		<header>
 			<h1>{{.Title}}</h1>
 			<p>{{.Description}}</p>
+				{{ partial "breadcrumb.html" . }}
 		</header>
 		{{ .Content }}
 	</article>
@@ -12,5 +13,5 @@
 	{{if and .Params.comments .Site.Params.UseDisqus }}
 		{{ partial "disqus_comments.html" . }}
 	{{ end }}
-	{{ partial "global_foot.html" . }}
 </main>
+{{ partial "site_footer.html" . }}

@@ -1,0 +1,18 @@
+/*Sample temp page css. Called out in the front matter (ie, temp_stylesheet:) of content/temp/temp-example-page.md. This is strictly for demonstration purposes and can be deleted:); */
+body {
+	width:90%;
+	max-width:700px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:"Georgia",serif;
+}
+
+h1 {
+	color:red;
+	font-family:"Georgia",serif;
+}
+
+p {
+	font-weight:bold;
+}

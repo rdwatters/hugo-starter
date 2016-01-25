@@ -35,7 +35,7 @@ publishdir = "public"
   # If true, the gulp build will write minified CSS to an html file titled "style-embed-for-crp-only.html" to layouts/partials that will write to a <style> tag in each html <head>. If set to false, the css is not embedded in each page but instead includes an external call to <link rel="stylesheet" href="{{.Site.BaseURL}}/css/style.min.css"> 
   UseCRP = false
   # Include the jQuery CDN in the <head> of your site?
-  IncludeJQ = false
+  IncludeJQ = true
   # There are two conditions that need to be met in order for Disqus comments to be added to a page. Keeping a site variable allows you to turn off all Disqus comments at once, whereas "comments:" set to "true" or "false" on an individual markdown file allows you more granular control at the article level. The partial (layouts/partials/disqus_comments.html) is written such that localhost will not load comments during development.  
   UseDisqus = true
   disqusShortname = ""

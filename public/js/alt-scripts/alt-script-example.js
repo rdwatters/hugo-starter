@@ -1,0 +1,1 @@
+console.log("This is from an alt script, which can be added in the yaml of individual pages; for example, using \"alt_script: my-alt-script.js\" to use this exact script.");
