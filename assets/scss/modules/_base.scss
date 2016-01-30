@@ -1,0 +1,28 @@
+html {
+    font-size: $base-font-size; //This will equal 1REM
+    line-height: $base-line-height;
+}
+
+body {
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    background: $body-background;
+    color: $base-font-color;
+}
+
+p {
+    line-height: $base-line-height;
+    margin-bottom: $base-font-size;
+}
+
+a {
+    color: $anchor-color;
+    font-weight: $anchor-weight;
+    -webkit-transition: $anchor-transition;
+    -moz-transition: $anchor-transition;
+    transition: $anchor-transition;
+}
+
+blockquote {
+    background:$blockquote-bg;
+}

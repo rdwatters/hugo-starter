@@ -3,33 +3,37 @@
 $M:668px; // This begins the tablet size. iPhone 6/6s portrait max width = 375px, landscape max width = 667px; iPhone 6+/6+s portrait max width = 414px, landscape max width = 736px
 $L:1025px; // This begins the desktop size. iPad mini/3/4 portrait width = 768px, landscape width = 1024px; 
 $XL:1200px; // Use this for extra-large screens
-
 //COLOR PALETTE
 $brand: #2A2C39;
 $brand-two: #51B3FE;
 $brand-three: #013B68;
 $accent-color: orange;
-$anchor-color: #000000;
-$button-color: $anchor-color;
+$button-color: $brand;
 $warning-color: #66101F;
 $white:#ffffff;
 $black:#000000;
-
+//ANCHORS
+$anchor-color:#000000;
+$anchor-weight:bold;
+$anchor-transition:0.3s;
 // BACKGROUNDS 
 $body-background:$white;
-
 // TYPOGRAPHY
 //$font sets the values in assets/scss/modules/_font-face.scss for @font-face. The default font is Raleway, which is included in static/css/fonts. Look to _font-face-scss for the naming convention. If you don't want to host the fonts yourself, comment out @import 'modules/font-face'; from style.scss and change $base-font-family accordingly.
-$font: "raleway"; 
+$font: "raleway",
+helvetica,
+sans-serif;
 $base-font-size:18px; //This sets your REM value for all HTML
-$base-font-family: $font, Arial,helvetica,sans-serif;
+$base-font-family: $font;
 $base-font-weight: 100;
 $base-font-color:#333333;
 $base-line-height:1.5;
-//Headings
+
+//HEADINGS
 $heading-font-family: $base-font-family;
-$heading-font-color:#444444;
+$heading-font-color: #444444;
 $heading-font-weight: 700;
+//Heading Font Sizes
 $h1-sm-screen:1.8rem;
 $h1-m-screen:2.2rem;
 $h1-l-screen:2.5rem;
@@ -45,3 +49,6 @@ $h4-l-screen:1.6rem;
 $h5-sm-screen:1.1rem;
 $h5-m-screen:1.2rem;
 $h5-l-screen:1.3rem;
+
+//Blockquotes
+$blockquote-bg:darken($body-background,10%);

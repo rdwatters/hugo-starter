@@ -10,29 +10,23 @@ html {
     width: 100%;
     margin: 0;
     padding: 0;
-    font-size: $base-font-size;
     font-kerning: normal;
     font-variant-ligatures: common-ligatures, contextual;
     -moz-font-feature-settings: "kern", "liga", "clig", "calt";
     -ms-font-feature-settings: "kern", "liga", "clig", "alt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
     font-feature-settings: "kern", "liga", "clig", "calt";
-    line-height: $base-line-height;
 }
 
 body,
 #body {
-    font-size: $base-font-size;
     min-height: 100%;
     min-height: 100vh;
     width: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    font-family: $base-font-family;
-    background: $body-background;
     position: relative;
-    color: $base-font-color;
 }
 
 *,
@@ -75,20 +69,11 @@ h1 {
     margin: 0.67em 0;
 }
 
-p {
-    line-height: $base-line-height;
-    margin-bottom: $base-font-size;
-}
-
 a {
-    color: $anchor-color;
     text-decoration: none;
     color: inherit;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    transition: .3s;
     background-color: transparent;
-    cursor: pointer!important;
+    cursor: pointer;
 }
 
 a:active,
@@ -232,11 +217,3 @@ td,
 th {
     padding: 0;
 }
-
-a {
-    font-weight:bold;
-    color:$anchor-color;
-    cursor: pointer;
-}
-
-
