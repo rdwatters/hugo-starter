@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Temps on Hugo Starter</title>
+    <link>/temp/</link>
+    <description>Recent content in Temps on Hugo Starter</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/temp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sample Temp Page</title>
+      <link>/sample-temp-page/</link>
+      <pubDate>Sat, 16 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/sample-temp-page/</guid>
+      <description>
+
+&lt;h1 id=&#34;temp-folder-example-page&#34;&gt;Temp Folder Example Page&lt;/h1&gt;
+
+&lt;p&gt;This is a sample &amp;ldquo;temp&amp;rdquo; page. The URL is decided by the title in the front matter of the markdown file. The &lt;code&gt;temp_stylesheet:&lt;/code&gt; in the individual markdown front matter points to a corresponding file with the same name in &lt;code&gt;static/css/temp-stylesheets&lt;/code&gt;, which will pipe the appropriate stylesheet in &lt;em&gt;after&lt;/em&gt; the site-wild stylesheet in cases where you make want to create one-off pages with URLs at the root of your site. To see why this page is styled differently, refer to &lt;code&gt;static/css/temp-stylesheets/temp-style-example.css&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

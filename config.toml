@@ -9,7 +9,7 @@ MetaDataFormat = "yaml"
 watch = true
 disableLiveReload= false
 verbose = true
-publishdir = "public"
+publishdir = "gh-pages"
 
 [permalinks]
   # The temp folder is created for one-off pages (eg, marketing and design-heavy pages that run outside other site templates). Keep in mind that all .md pages under temp still require title and date in the YAML/front matter

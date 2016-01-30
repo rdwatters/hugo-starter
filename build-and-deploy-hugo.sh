@@ -1,4 +1,4 @@
-echo "Building and Sending Changes to GitHub"
+echo "Building Hugo site to \"gh-pages\" directory and pushing to GitHub."
 cd ~/Sites/hugo-starter/ && rm -rf public/
 hugo
 git add .
