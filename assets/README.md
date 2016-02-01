@@ -1,19 +1,30 @@
 # Gulp Asset Pipeline for Hugo Starter
 
-> **NOTE:** Before using Gulp as your build tool, you will need to install the necessary node modules after cloning the hugo-starter repository. From the command line, `cd` into the `/hugo-starter/assets` and type `npm install` from the command line.
+> **NOTE:** Install all NPM packages before running `gulp`. From within `hugo-starter/`, type `cd assets/ && npm install`.
 
 ### JavaScript (`js/`)
 
-The Gulp build concatenates, minifies, and uglifies JavaScript files to observe best practices w/r/t critical render path [critical render path (CRP)](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en).  
+The Gulp build concatenates, minifies, and uglifies JavaScript files for critical render path [critical render path (CRP)](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en).  
 
-* All scripts in `modules/` will be concatenated into a single file. There are three preloaded files with the starter:
-    * [fluidvids.js](https://github.com/toddmotto/fluidvids). This allows you to add iFrames for YouTube and Vimeo directly to your `.md` files in `content/` and make them responsive without having to use [Hugo shortcodes](http://gohugo.io/extras/shortcodes/). This may come in handy if you if you are copying markdown files from another static site generator (eg, Jekyll, Hexo). 
-    * [classList.js](https://github.com/eligrey/classList.js/). In my opinion, the most common use-case for publishing sites and jQuery is the ease of switching classes. Simply put, `classList.js` allows you to use `element.classList.add('theclass')`, `element.classList.toggle('theclass')`, and `element.classList.add('theclass')` in browsers that to not support that feature of ES5 (ie, IE 7-9).
-    * `target-blank-external-links`. This script adds `target="_blank"` to all anchors to print documents (pdf, Word, Excel) and external websites.    
-* The concatenated file is then run through [Babel.js](https://babeljs.io/) for ES6 transpilation, which means you can write your JavaScript using future JS syntax. **NOTE:** you will need the `.babelrc` in `assets/` so that `npm install` includes the "ES2015" preset package for transpilation. The current Babel package does not include the classList polyfill, which is why it's included with the starter.
-* The Babel-transpiled file is then uglified [(gulp-uglify)](https://www.npmjs.com/package/gulp-uglify), minified, renamed to `main.min.js` and copied to `hugo-starter/static/` and included as a link in `hugo-start/layouts/partials/global_foot/site_scripts.html`.
-* If you want to add separate scripts on a per-page basis, you can do so by creating JavaScript files directly in `static/js/alt_scripts/` and then calling out the alt script in the YAML/TOML of the front matter for a page (eg, `alt_script: alt-script-example.js`). This script is then piped in just before your closing `</body>` tag and after `main.min.js`.
-* **A NOTE ON JQUERY.** jQuery is *not* included in the modules folder since the file size slows down uglification and ES6 transpilation. Instead, adding jQuery to your site can be done in your `config.toml` file with the `IncludeJQ` parameter (default: true), which adds the jQuery CDN to the `<head>` of your HTML.
+* All scripts in `modules/` are concatenated into a single file (`./static/js/main.min.js`. Any module can be deleted or commented out if you don't need it in your site. There are 4 modules included in the starter kit:
+    * [fluidvids.js](https://github.com/toddmotto/fluidvids). FluidVids makes YouTube and Vimeo videos responsive when an iFrame is included in a Markdown file in `content/`. This precludes use of [Hugo shortcodes](http://gohugo.io/extras/shortcodes/), which might make porting other SSG-based `.md` files more difficult.  
+    * [class-list.js](https://github.com/eligrey/classList.js/). Class toggling is one of the common uses of jQuery. `class-list.js` allows you to use syntax otherwise unsupported in <= IE9 (eg, `element.classList.add('theclass')`, `element.classList.toggle('theclass')`, and `element.classList.add('theclass')` so that you might skip adding all of jQuery for this singular feature. For more examples of ES5 workaround for common jQuery features, visit <http://youmightnotneedjquery.com/>
+    * `target-blank-external-links`. Adds `target="_blank"` to all anchors for print documents (pdf, Word, Excel) and external websites. See file comments for further explanation.
+    * `blockquote-styling-based-on-hyphen-position`. This script extends Markdown's blockquote to include additional `<cite>` tags and classes for improved semantics and styling. See file comments for further explanation.
+    * `es2015-string-methods.js`. Adds ES2015 string methods(`str.endsWith()`,`str.beginsWith()`, str.includes()) in browsers where these methods are not supported. See file comments for further explanation.    
+* The single concatenated file of all modules is transpiled through [Babel.js](https://babeljs.io/). Babel allows you to create your own modules in ES2015/ES6 syntax. **NOTE:** `.babelrc` in `assets/` is required so that `npm install` includes the "ES2015" preset for transpilation.
+* The transpiled file is uglified [(gulp-uglify)](https://www.npmjs.com/package/gulp-uglify), minified [(css-nano)](https://github.com/ben-eb/gulp-cssnano), renamed to `main.min.js` and copied to `hugo-starter/static/js/`. `main.min.js` is linked as the primary global script in `hugo-start/layouts/partials/global_foot/site_scripts.html`.
+* If you want to add separate scripts on a per-page basis, you can do so by creating JavaScript files directly in `static/js/alt_scripts/` and then calling out the alt script in the YAML/TOML front matter of an md content file. For example:
+    ```
+    ---
+    title: My Title
+    subtitle: My Subtitle
+    date: 2016-02-01
+    alt_script: alt-script-example.js
+    ---
+    ```
+    > **NOTE:** Alternative scripts are added just before your closing `</body>` tag and *after* `main.min.js`.
+* **A NOTE ON JQUERY.** jQuery is *not* included in the modules folder since the file size slows down uglification and ES6 transpilation. If you want to add jQuery to your site, set `IncludeJQ = true` in your `config.toml` file.
 
 ### CSS/SASS (`sass/`)
 
@@ -21,5 +32,7 @@ All (`*.scss`) are watched in `assets/scss`, including those in `assets/scss/mod
 
 * [Bourbon mixin library](http://bourbon.io/docs/)
 * [Neat (Lightweight grid semantic framework)](http://thoughtbot.github.io/neat-docs/latest/)
-* A simple grid system at `scss/_layout.scss` that makes embedding media queries in nested selectors very easy. The MQ values are set at the top of  `/modules/_variables.scss`. If you do want to include this set of media query mixins, know that the default `_typography.scss` relies on them to set font sizes across different devices. 
-* A slightly tweaked reset (`assets/scss/modules/_reset.scss`). This reset includes values from the `_variables.scc` in an effort to keep your final minified `style.min.css` as small as possible. 
+* [Eric Meyer's CSS Reset 2.0](http://meyerweb.com/eric/tools/css/reset/)
+* `/modules/_font-face.scss` sass module. See file comments for details regarding the naming convention and inclusion of several open source fonts.
+* `/modules/_social-media` a class list for all official brand colors for various social media outlet. See file comments for further detail.
+* Basic media query mixins at `scss/_layout.scss`. Media query values can be set at the top of `/modules/_variables.scss`. `scss/_layout.scss` is simplified version of the [media mixins included with Neat](http://thoughtbot.github.io/neat-docs/latest/#media). **NOTE:** If you delete `/modules/_layout.scss`, know that the default `_typography.scss` relies on them to set font sizes for headings in `variables.scss`.   

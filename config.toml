@@ -1,19 +1,32 @@
+archetypedir = "archetypes"
 baseurl = ""
-languageCode = "en-us"
-title = "Hugo Starter"
-buildDrafts = true
-relativeURLs = true
+buildDrafts = false
+buildFuture = false
 canonifyurls = true
-pygmentsUseClasses = true
-MetaDataFormat = "yaml"
-watch = true
+config = "config.toml"
+contentdir = "content"
 disableLiveReload= false
+disableRSS = false
+disableSitemap = false
+ignoreFiles = []
+languageCode = "en-us"
+layoutDir = "layouts"
+log = false
+metaDataFormat = "yaml"
+publishdir = "public"
+pygmentsUseClasses = true
+relativeURLs = true
+source = ""
+title = "Hugo Starter"
+uglyURLs = false
 verbose = true
-publishdir = "gh-pages"
+verboseLog = false
+watch = true
 
 [permalinks]
   # The temp folder is created for one-off pages (eg, marketing and design-heavy pages that run outside other site templates). Keep in mind that all .md pages under temp still require title and date in the YAML/front matter
   temp = "/:title/"
+  testing = "/:title/"
 
 [params]
 	AuthorName = ""
@@ -43,6 +56,8 @@ publishdir = "gh-pages"
 [blackfriday]
 	plainIDAnchors = true
 	hrefTargetBlank = true
+  angledQuotes = true
+  latexDashes = true
 
 [taxonomies]
   tag = "tags"

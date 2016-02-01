@@ -1,6 +1,6 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
-@import 'modules/variables';
+@import 'variables';
 @import 'modules/mixins';
 @import 'modules/reset';
 @import 'modules/base';
@@ -9,7 +9,7 @@
 @import 'modules/typography';
 @import 'modules/social-media';
 
-/*** Delete the following. Styling for the included homepage (layouts/index.html) in Hugo-starter.***/
+/*** Delete the following. Disposable styling for the included homepage (layouts/index.html) in Hugo-starter.***/
 
 .main {
 	display:block;

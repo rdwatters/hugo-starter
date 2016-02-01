@@ -5,51 +5,56 @@ I put together this starter kit to provide some basic boiler plate for creating 
 ### Requirements
 
 * Hugo. If you don't already have the binary, [here are the directions for installation](https://gohugo.io/overview/installing/).
-* Node.js. If you don't have node.js install, you can download and install it  [from the installer page](https://nodejs.org/en/download/). Installation from the Node.js website includes NPM, which you will need for installation of all js development dependencies. 
+* Node.js. You can download and install on the [Node.js the installer page](https://nodejs.org/en/download/). Installation from the Node.js website includes NPM, which you will need for installation of all js development dependencies.
+
+> If this is your first site, I'd recommend installing Node.js, Hugo, *and* Git via the [Homebrew Package Manager](https://github.com/Homebrew/homebrew/tree/master/share/doc/homebrew#readme)
 
 ### Getting Started
 
-From the command line, `cd` into the directory where you would like to build your site.
-
+* `cd ~/path/to/your/site/directory/`
 * `git clone https://github.com/rdwatters/hugo-starter`
 * `cd hugo-starter && hugo serve`
-* (New Tab) `cd assets/ && npm install`
+* (New Terminal Tab) `cd assets/ && npm install` 
 * `gulp`
-* Open your browser to `localhost:1313`. You should see an `<h1>` with "Ryan's Hugo Starter Kit" and a series of 7 Social icons on the bottom left of the page.
+* Open your browser to `localhost:1313`. You should see an `<h1>` with "Hugo Starter Kit" and social icons.
 
-### Gulp Asset Pipeline (See README in `assets/` for more details)
+### Gulp Asset Pipeline (See README in `assets/` for details)
 
-* CSS Reset with `_variables.scss` for some basic defaults, including typography
-* SASS compiling with minification and autoprefixer
-* Bourbon and Neat Mixins
-* JavaScript Concatenation, minification, and ES6 transpilation
+* CSS reset
+* SASS compiling with minification and autoprefixer 
+* `variables.scss` with basic media query, 
+
+* [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/) Mixins 
+* JavaScript concatenation, minification, and [ES6 transpilation](https://babeljs.io/)
 
 ### Global Partials
 
-* Create your pages with `{{ partial "global_head.html" }}` and `{{ partial "global_foot.html" }}` on all single or list layouts 
-* Global partials include favicons, global navigation and site header, metadata (including OGP for Social Sharing), search form, site footer, site copyright, footer navigation, and stylesheets via external call or embedding via critical render path (a boolean set in `config.toml`; see the config file for more details)
-* Site scripts with conditional templating for page-level additions
+* Create your pages with `{{ partial "site_header.html" }}` and `{{ partial "site_footer.html" }}` on all single or list layouts 
+* Global partials include favicons, site navigation/header, metadata (including [OGP](http://ogp.me/) for social sharing), search form, site footer, site copyright, footer navigation
+* Two options for stylesheets via external `<link>` or embedding via critical render path (boolean parameter in `config.toml`)
+* Site scripts with conditional templating allowing for additional page- or section-specific scripts
 
 ### `temp` Section with `temp-stylesheets` and `alt-scripts`
 
 * `temp/` allows for singleton pages with alt stylesheets and scripts that can be created at the page level 
-* You can use the `temp` section to create these pages with nice short URLs (see `config.toml` `[permalinks]`)
+* `temp` creates one-off pages with convenient short URLs (see `[permalinks]` in `config.toml`)
 
 ### `config.toml`
 
-* Disqus comments
-* Social media settings
+* Disqus comments 
+* Social media
 * Taxonomies (tags, categories)
 * jQuery CDN (boolean)
-* BlackFriday settings
+* Minimal BlackFriday settings
  
 ### SVG Icons
 
-* 30 svg icons are included in `partials/svg_icons` for easier embedding/styling in HTML, including social media lists at page bottom.
+* 30 svg icons in `partials/svg_icons` for easier embedding, easier styling, resolution independence, and fewer HTTP requests 
+* Includes social media icons in site footer
 
-### Handy Utilities
+### Utilities
 
 * `linkcheck.go`. Run this file from the root by typing `go linkcheck.go` to see if any of your internal links are broken. Errors should be thrown to the terminal.
-* `build-and-deploy-hugo.sh`. (In Development) A handy BASH script that walks you through clearing out your old publish directory, rebuilding your Hugo site, setting up an alias in `.bash_profile` for convenience, and deploying to GH pages for free hosting. 
-* `CNAME`,`robots.txt`, etc. Nothing huge, but I figured I would save you a step:smiley:. 
+* `build-and-deploy-hugo.sh`. (In Development) See script comments before running `bash build-and-deploy-hugo.sh`. 
+* `CNAME`,`robots.txt` 
    
