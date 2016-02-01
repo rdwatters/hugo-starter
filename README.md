@@ -10,17 +10,19 @@ For more detailed information on the Gulp Asset Pipeline, see the [README in the
 
 ## What This Kit Is **Not**
 
-This kit is not a replacement for the [official Hugo Documentation](http://gohugo.io/overview/introduction/). 
+This kit is not a theme. The kit is for those who want to build their site's style from scratch.
 
-The workflow inherit in the build process is not unbiased. It directly reflects my own workflow and front-end habits. That said, my hope is that the kit will save beginners time.
+This kit is not a replacement for the [official Hugo Documentation](http://gohugo.io/overview/introduction/). If you are new to Hugo, I'd recommend reading the documentation first. If you have questions related to building your site, join the [Hugo Discuss Forum](https://discuss.gohugo.io/). 
 
 This kit is (probably) not as friendly to PC users since my development experience is limited to OSX. This is a shortcoming on my part. I'll continue to develop the documentation to be cross-platform. Feel free to submit a pull request :smiley:.
 
+> **Note:** The workflow inherent in the build process is my own and reflects my own biases. This kit might be too opinionated or constricting for seasoned developers. My hope is that the kit will save beginners time by providing sane defaults.
+
 ## Requirements
 
-* Hugo. If you don't already have the binary, [here are the directions for installation](https://gohugo.io/overview/installing/).
-* Node.js. You can download and install via the [Node.js installer page](https://nodejs.org/en/download/). Installation from the Node.js website includes NPM, which you will need for installation of all js development dependencies.
-* Git. This is obvious. You're on GitHub. Put your project in version control if you're willing to do more than download the zip file.
+* Hugo. [Here are the directions for installation](https://gohugo.io/overview/installing/).
+* Node.js. You can download and install via the [Node.js installer page](https://nodejs.org/en/download/). Installation from the Node.js website includes NPM, the package manager for Node. You will need both to run the asset pipeline.
+* Git. Put your project in version control if you're willing to do more than download the zip.
 
 > If this is your first experience with any of the above tools, I'd recommend installing Node.js, Hugo, *and* Git via the [Homebrew Package Manager](https://github.com/Homebrew/homebrew/tree/master/share/doc/homebrew#readme)
 
@@ -78,10 +80,11 @@ From the command line...
 * jQuery CDN (boolean)
 * Minimal BlackFriday settings
  
-## SVG Icons
+## SVG & Font Awesome Icons
 
 * 30 svg icons in `partials/svg_icons` for easier embedding and styling via CSS, resolution independence, and fewer HTTP requests 
-* On startup, all social media icons in the bottom left are pulled from this directory
+* On your first `hugo server`, all social media icons in the bottom left are pulled from the SVG icon directory
+* Font Awesome Version 4.5.0 (`/assets/scss/fontawesome/\*scss & `/static/css/fonts/fontawesome` for actual font files)
 
 ## Utilities
 
