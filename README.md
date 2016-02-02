@@ -89,7 +89,7 @@ Once you've installed all the requirements -
 ## Open Source Fonts
 
 * `/static/css/fonts/` includes Open Sans, Lato, Montserrat, Noto Serif, Raleway, Roboto, Source Sans Pro, and Ubuntu.
-* `/assets/scss/modules/_font-face.scss` has been created with a naming convention so that you can include the font of your choice with a single `$font` variable in `variables.scss`. See the comments in both `_font-face.scss` and `variables` for more details.
+* `/assets/scss/modules/_font-face.scss` has been created with a naming convention so that you can include the font of your choice with a single `$font` variable in `variables.scss`. See the comments in `_font-face.scss` and `variables.scss` for more details.
 
 ## Utilities
 
