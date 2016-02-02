@@ -4,16 +4,16 @@
 
 ### JavaScript (`js/`)
 
-The Gulp build concatenates, minifies, and uglifies JavaScript files for critical render path [critical render path (CRP)](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en).  
+The Gulp build concatenates, minifies, and uglifies JavaScript files to improve [critical render path (CRP)](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en).  
 
-* All scripts in `modules/` are concatenated into a single file (`./static/js/main.min.js`. Any module can be deleted or commented out if you don't need it in your site. There are 4 modules included in the starter kit:
+* All scripts in `modules/` are concatenated into a single file (`./static/js/main.min.js`. Any module can be deleted or commented out if you don't need it in your site. There are 5 modules included in the starter kit:
     * [fluidvids.js](https://github.com/toddmotto/fluidvids). FluidVids makes YouTube and Vimeo videos responsive when an iFrame is included in a Markdown file in `content/`. This precludes use of [Hugo shortcodes](http://gohugo.io/extras/shortcodes/), which might make porting other SSG-based `.md` files more difficult.  
     * [class-list.js](https://github.com/eligrey/classList.js/). Class toggling is one of the common uses of jQuery. `class-list.js` allows you to use syntax otherwise unsupported in <= IE9 (eg, `element.classList.add('theclass')`, `element.classList.toggle('theclass')`, and `element.classList.add('theclass')` so that you might skip adding all of jQuery for this singular feature. For more examples of ES5 workaround for common jQuery features, visit <http://youmightnotneedjquery.com/>
-    * `target-blank-external-links`. Adds `target="_blank"` to all anchors for print documents (pdf, Word, Excel) and external websites. See file comments for further explanation.
-    * `blockquote-styling-based-on-hyphen-position`. This script extends Markdown's blockquote to include additional `<cite>` tags and classes for improved semantics and styling. See file comments for further explanation.
+    * `target-blank-external-links.js`. Adds `target="_blank"` to all anchors for print documents (pdf, Word, Excel) and external websites. See file comments for further explanation.
+    * `blockquote-styling-based-on-hyphen-position.js`. This script extends Markdown's blockquote to include additional `<cite>` tags and classes for improved semantics and styling. See file comments for further explanation.
     * `es2015-string-methods.js`. Adds ES2015 string methods(`str.endsWith()`,`str.beginsWith()`, str.includes()) in browsers where these methods are not supported. See file comments for further explanation.    
-* The single concatenated file of all modules is transpiled through [Babel.js](https://babeljs.io/). Babel allows you to create your own modules in ES2015/ES6 syntax. **NOTE:** `.babelrc` in `assets/` is required so that `npm install` includes the "ES2015" preset for transpilation.
-* The transpiled file is uglified [(gulp-uglify)](https://www.npmjs.com/package/gulp-uglify), minified [(css-nano)](https://github.com/ben-eb/gulp-cssnano), renamed to `main.min.js` and copied to `hugo-starter/static/js/`. `main.min.js` is linked as the primary global script in `hugo-start/layouts/partials/global_foot/site_scripts.html`.
+* The single concatenated file of all modules is transpiled through [Babel.js](https://babeljs.io/). Babel allows you to create your own modules in ES2015/ES6 syntax. **NOTE:** `.babelrc` in `assets/` is necessary for `npm install` to include the "ES2015 preset" for transpilation.
+* The transpiled file is uglified [(gulp-uglify)](https://www.npmjs.com/package/gulp-uglify), minified [(css-nano)](https://github.com/ben-eb/gulp-cssnano), renamed to `main.min.js`, and copied to `hugo-starter/static/js/`. `main.min.js` is linked as the primary global script in `hugo-start/layouts/partials/global_foot/site_scripts.html`.
 * If you want to add separate scripts on a per-page basis, you can do so by creating JavaScript files directly in `static/js/alt_scripts/` and then calling out the alt script in the YAML/TOML front matter of an md content file. For example:
     ```
     ---
@@ -23,8 +23,8 @@ The Gulp build concatenates, minifies, and uglifies JavaScript files for critica
     alt_script: alt-script-example.js
     ---
     ```
-    > **NOTE:** Alternative scripts are added just before your closing `</body>` tag and *after* `main.min.js`.
-* **A NOTE ON JQUERY.** jQuery is *not* included in the modules folder since the file size slows down uglification and ES6 transpilation. If you want to add jQuery to your site, set `IncludeJQ = true` in your `config.toml` file.
+* Alternative scripts are added just before your closing `</body>` tag and *after* `main.min.js`.
+> *A NOTE ON JQUERY:** jQuery is *not* included in the modules folder since the file size slows down uglification and ES6 transpilation. If you want to add jQuery to your site, set `IncludeJQ = true` in your `config.toml` file.
 
 ### CSS/SASS (`sass/`)
 
