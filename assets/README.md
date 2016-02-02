@@ -14,16 +14,16 @@ The Gulp build concatenates, minifies, and uglifies JavaScript files to improve 
     5. `es2015-string-methods.js`. Adds ES2015 string methods(`str.endsWith()`,`str.beginsWith()`, str.includes()) in browsers where these methods are not supported. See file comments for further explanation.    
 * The single concatenated file of all modules is transpiled through [Babel.js](https://babeljs.io/). Babel allows you to create your own modules in ES2015/ES6 syntax. `.babelrc` in `assets/` is necessary for `npm install` to include the "ES2015 preset" for transpilation.
 * The transpiled file is uglified [(gulp-uglify)](https://www.npmjs.com/package/gulp-uglify), minified [(css-nano)](https://github.com/ben-eb/gulp-cssnano), renamed to `main.min.js`, and copied to `hugo-starter/static/js/`. `main.min.js` is linked as the primary global script in `/layouts/partials/global_foot/site_scripts.html`.
-* If you want to add separate scripts on a per-page basis, you can do so by creating JavaScript files directly in `static/js/alt_scripts/` and then calling out the alt script in the YAML/TOML front matter of an md content file. For example:
-    ```yaml
-    ---
-    title: My Title
-    subtitle: My Subtitle
-    date: 2016-02-01
-    alt_script: alt-script-example.js
-    ---
-    ```
-* Alternative scripts are added just before your closing `</body>` tag and *after* `main.min.js`.
+* If you want to add separate scripts on a per-page basis, you can do so by creating JavaScript files directly in `static/js/alt_scripts/` and then calling out the alt script in the YAML/TOML front matter of an md content file. Alternative scripts are added just before your closing `</body>` tag and *after* `main.min.js`. For example:
+
+```
+---
+title: My Title
+subtitle: My Subtitle
+date: 2016-02-01
+alt_script: alt-script-example.js
+---
+```
 
 > **A NOTE ON JQUERY:** jQuery is *not* included in the modules folder since the file size slows down uglification and ES2015 transpilation. If you want to add jQuery to your site, set `IncludeJQ = true` in `config.toml`.
 
