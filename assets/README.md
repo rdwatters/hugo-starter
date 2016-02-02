@@ -12,10 +12,10 @@ The Gulp build concatenates, minifies, and uglifies JavaScript files to improve 
     3. `target-blank-external-links.js`. Adds `target="_blank"` to all anchors for print documents (pdf, Word, Excel) and external websites. See file comments for further explanation.
     4. `blockquote-styling-based-on-hyphen-position.js`. This script extends Markdown's blockquote to include additional `<cite>` tags and classes for improved semantics and styling. See file comments for further explanation.
     5. `es2015-string-methods.js`. Adds ES2015 string methods(`str.endsWith()`,`str.beginsWith()`, str.includes()) in browsers where these methods are not supported. See file comments for further explanation.    
-* The single concatenated file of all modules is transpiled through [Babel.js](https://babeljs.io/). Babel allows you to create your own modules in ES2015/ES6 syntax. **NOTE:** `.babelrc` in `assets/` is necessary for `npm install` to include the "ES2015 preset" for transpilation.
-* The transpiled file is uglified [(gulp-uglify)](https://www.npmjs.com/package/gulp-uglify), minified [(css-nano)](https://github.com/ben-eb/gulp-cssnano), renamed to `main.min.js`, and copied to `hugo-starter/static/js/`. `main.min.js` is linked as the primary global script in `hugo-start/layouts/partials/global_foot/site_scripts.html`.
+* The single concatenated file of all modules is transpiled through [Babel.js](https://babeljs.io/). Babel allows you to create your own modules in ES2015/ES6 syntax. `.babelrc` in `assets/` is necessary for `npm install` to include the "ES2015 preset" for transpilation.
+* The transpiled file is uglified [(gulp-uglify)](https://www.npmjs.com/package/gulp-uglify), minified [(css-nano)](https://github.com/ben-eb/gulp-cssnano), renamed to `main.min.js`, and copied to `hugo-starter/static/js/`. `main.min.js` is linked as the primary global script in `/layouts/partials/global_foot/site_scripts.html`.
 * If you want to add separate scripts on a per-page basis, you can do so by creating JavaScript files directly in `static/js/alt_scripts/` and then calling out the alt script in the YAML/TOML front matter of an md content file. For example:
-    ```
+    ```yaml
     ---
     title: My Title
     subtitle: My Subtitle
@@ -25,7 +25,7 @@ The Gulp build concatenates, minifies, and uglifies JavaScript files to improve 
     ```
 * Alternative scripts are added just before your closing `</body>` tag and *after* `main.min.js`.
 
-> **A NOTE ON JQUERY:** jQuery is *not* included in the modules folder since the file size slows down uglification and ES6 transpilation. If you want to add jQuery to your site, set `IncludeJQ = true` in `config.toml`.
+> **A NOTE ON JQUERY:** jQuery is *not* included in the modules folder since the file size slows down uglification and ES2015 transpilation. If you want to add jQuery to your site, set `IncludeJQ = true` in `config.toml`.
 
 ### CSS/SASS (`sass/`)
 
