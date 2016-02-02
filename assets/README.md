@@ -24,7 +24,7 @@ The Gulp build concatenates, minifies, and uglifies JavaScript files to improve 
     ---
     ```
 * Alternative scripts are added just before your closing `</body>` tag and *after* `main.min.js`.
-* 
+
 > *A NOTE ON JQUERY:** jQuery is *not* included in the modules folder since the file size slows down uglification and ES6 transpilation. If you want to add jQuery to your site, set `IncludeJQ = true` in your `config.toml` file.
 
 ### CSS/SASS (`sass/`)
