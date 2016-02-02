@@ -38,4 +38,4 @@ All (`*.scss`) are watched in `assets/scss`, including those in `assets/scss/mod
 * `/modules/_social-media` a class list for all official brand colors for various social media outlet. See file comments for further detail.
 * Basic media query mixins at `scss/_layout.scss`. Media query values can be set at the top of `/modules/_variables.scss`. `scss/_layout.scss` is a simplified version of the [media mixins included with Neat](http://thoughtbot.github.io/neat-docs/latest/#media). 
 
-> *NOTE:** Be careful if deleting `/modules/_layout.scss` since `_typography.scss` relies on the media query mixins therein to set font sizes for headings in `variables.scss`.   
+> **NOTE:** Be careful if deleting `/modules/_layout.scss` since `_typography.scss` relies on the media query mixins therein to set font sizes for headings in `variables.scss`.   
