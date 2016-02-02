@@ -1,6 +1,6 @@
 archetypedir = "archetypes"
 baseurl = ""
-buildDrafts = false
+buildDrafts = true
 buildFuture = false
 canonifyurls = true
 config = "config.toml"
@@ -26,7 +26,6 @@ watch = true
 [permalinks]
   # The temp folder is created for one-off pages (eg, marketing and design-heavy pages that run outside other site templates). Keep in mind that all .md pages under temp still require title and date in the YAML/front matter
   temp = "/:title/"
-  testing = "/:title/"
 
 [params]
 	AuthorName = ""
@@ -52,6 +51,7 @@ watch = true
   # There are two conditions that need to be met in order for Disqus comments to be added to a page. Keeping a site variable allows you to turn off all Disqus comments at once, whereas "comments:" set to "true" or "false" on an individual markdown file allows you more granular control at the article level. The partial (layouts/partials/disqus_comments.html) is written such that localhost will not load comments during development.  
   UseDisqus = true
   disqusShortname = ""
+  SitePublishDate = "2016-01-01"
 
 [blackfriday]
 	plainIDAnchors = true

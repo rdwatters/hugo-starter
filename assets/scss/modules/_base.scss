@@ -8,6 +8,8 @@ body {
     font-family: $base-font-family;
     background: $body-background;
     color: $base-font-color;
+    position:relative;
+    min-height:100%;
 }
 
 p {

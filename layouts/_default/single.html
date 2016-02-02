@@ -1,11 +1,11 @@
 {{ partial "site_head.html" . }}
 <!-- Simple starter layout for your single content files. Delete if needed.  -->
 <main class="main">
-	<article>
+	<!-- The swiftype attributes in this sample can be removed if you are not using Swiftype as your site search. -->
+	<article data-swiftype-name="body" data-swiftype-type="text">
 		<header>
 			<h1>{{.Title}}</h1>
 			<p>{{.Description}}</p>
-				{{ partial "breadcrumb.html" . }}
 		</header>
 		{{ .Content }}
 	</article>

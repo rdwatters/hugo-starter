@@ -1,0 +1,11 @@
+<meta class="swiftype" name="title" data-type="string" content="{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}" />
+<meta class="swiftype" name="url" data-type="enum" content="{{ .Permalink }}" />
+<meta class='swiftype' name='image' data-type='enum' content='{{if .Params.image }}{{.Site.BaseURL}}/images/{{.Params.image}}{{else}}{{.Site.BaseURL}}/images/site-logo.png{{end}}' />
+<meta class='swiftype' name='sections' data-type='string' content='{{if .IsHome}}Home{{else}}{{.Section}}{{end}}' />
+<meta class="swiftype" name="published_at" data-type="date" content="{{if .IsHome}}{{.Site.Params.SitePublishDate}}{{else if .IsPage }}{{.PublishDate.Format "2006-01-02"}}{{end}}"/>
+<meta class='swiftype' name='info' data-type='string' content='{{if .IsHome}}{{.Site.Params.SiteDescription}}{{else}}{{.Description}}{{end}}'/>
+{{if isset .Params "tags"}}
+	{{ range .Params.tags }}
+	<meta class="swiftype" name="tags" data-type="string" content="{{.}}" />
+	{{ end }}
+{{ end }}

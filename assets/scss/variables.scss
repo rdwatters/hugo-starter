@@ -19,13 +19,14 @@ $anchor-color:#000000;
 $anchor-weight:bold;
 $anchor-transition:0.3s;
 
-// BACKGROUNDS 
+// BODY 
 $body-background:$white;
+$footer-height:80px;
 
 // TYPOGRAPHY
 // See comments in /assets/scss/modules/_font-face.scss for naming conventions 
 // Include fonts = "raleway","ubuntu","notoserif","opensans",and "lato"
-$font: "raleway";
+$font: "pnov";
 $base-font-size: 18px; //This sets your REM value for all HTML
 $base-font-family: $font,Arial,helvetica,sans-serif;
 $base-font-weight: 400;

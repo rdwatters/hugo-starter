@@ -29,28 +29,28 @@
 	{{ end }}
 	{{ if .Site.Params.Pinterest }}
 	<li>
-		<a href="{{.Site.Params.Pinterest}}" target="_blank">
+		<a href="{{.Site.Params.Pinterest}}" target="_blank" title="Vist the Pinterest account for {{.Site.Title}}">
 			{{ partial "svg_icons/pinterest-icon.svg"}}
 		</a>
 	</li>
 	{{ end }}
 	{{ if .Site.Params.GooglePlus }}
 	<li>
-		<a href="{{.Site.Params.GooglePlus}}" target="_blank" title="Visit the Google Plus account for {{.Site.Params.GooglePlus}}">
+		<a href="{{.Site.Params.GooglePlus}}" target="_blank" title="Visit the Google Plus account for {{.Site.Title}}">
 			{{ partial "svg_icons/googleplus-icon.svg"}}
 		</a>
 	</li>
 	{{ end }}
 	{{ if .Site.Params.Tumblr }}
 	<li>
-		<a href="{{.Site.Params.Tumblr}}" target="_blank" title="Visit the Tumblr account for {{.Site.Params.Tumblr}}">
+		<a href="{{.Site.Params.Tumblr}}" target="_blank" title="Visit the Tumblr account for {{.Site.Title}}">
 			{{ partial "svg_icons/tumblr-icon.svg"}}
 		</a>
 	</li>
 	{{ end }}
 	{{ if .Site.Params.GitHub }}
 	<li>
-		<a href="{{.Site.Params.GitHub}}" target="_blank" title="Visit the GitHub account for {{.Site.Params.Tumblr}}">
+		<a href="{{.Site.Params.GitHub}}" target="_blank" title="Visit the GitHub account for {{.Site.Title}}">
 			{{ partial "svg_icons/github-icon.svg"}}
 		</a>
 	</li>

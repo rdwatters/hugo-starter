@@ -7,7 +7,7 @@
 <!-- Open Graph Protocol http://ogp.me/ -->
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
-<meta property="og:image" content="{{ if .Params.main_image }}{{.Site.BaseURL}}/images/{{.Params.main_image}}{{ else }}{{.Site.BaseURL}}/images/site-logo.png{{ end }}">
+<meta property="og:image" content="{{ if .Params.image }}{{.Site.BaseURL}}/images/{{.Params.image}}{{ else }}{{.Site.BaseURL}}/images/site-logo.png{{ end }}">
 <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.SiteDescription }}{{ end }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <!-- Preconnect API. For browser compatibility, check http://caniuse.com/#feat=link-rel-preconnect -->
@@ -25,5 +25,5 @@
 	<link rel="prerender" href="{{.PrevInSection.Permalink}}">
 	{{ end }}
 {{ end }}
-<!-- Generator. Let's give some love to Hugo. -->
+<!-- Generator w/Version Number. Let's give some love to Hugo. -->
 {{.Hugo.Generator}}
