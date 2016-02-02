@@ -25,7 +25,7 @@ The Gulp build concatenates, minifies, and uglifies JavaScript files to improve 
     ```
 * Alternative scripts are added just before your closing `</body>` tag and *after* `main.min.js`.
 
-> *A NOTE ON JQUERY:** jQuery is *not* included in the modules folder since the file size slows down uglification and ES6 transpilation. If you want to add jQuery to your site, set `IncludeJQ = true` in your `config.toml` file.
+> **A NOTE ON JQUERY:** jQuery is *not* included in the modules folder since the file size slows down uglification and ES6 transpilation. If you want to add jQuery to your site, set `IncludeJQ = true` in `config.toml`.
 
 ### CSS/SASS (`sass/`)
 
@@ -36,4 +36,6 @@ All (`*.scss`) are watched in `assets/scss`, including those in `assets/scss/mod
 * [Eric Meyer's CSS Reset 2.0](http://meyerweb.com/eric/tools/css/reset/)
 * `/modules/_font-face.scss` sass module. See file comments for details regarding the naming convention and inclusion of several open source fonts.
 * `/modules/_social-media` a class list for all official brand colors for various social media outlet. See file comments for further detail.
-* Basic media query mixins at `scss/_layout.scss`. Media query values can be set at the top of `/modules/_variables.scss`. `scss/_layout.scss` is simplified version of the [media mixins included with Neat](http://thoughtbot.github.io/neat-docs/latest/#media). **NOTE:** If you delete `/modules/_layout.scss`, know that the default `_typography.scss` relies on them to set font sizes for headings in `variables.scss`.   
+* Basic media query mixins at `scss/_layout.scss`. Media query values can be set at the top of `/modules/_variables.scss`. `scss/_layout.scss` is a simplified version of the [media mixins included with Neat](http://thoughtbot.github.io/neat-docs/latest/#media). 
+
+> *NOTE:** Be careful if deleting `/modules/_layout.scss` since `_typography.scss` relies on the media query mixins therein to set font sizes for headings in `variables.scss`.   
