@@ -4,31 +4,31 @@
 
 This kit includes basic boilerplate for creating static sites with [Hugo](https://gohugo.io/). 
 
-If you are confused about source organization, build steps, modules, etc, *every* HTML file, partial, `.js`, and `.scss` file includes thorough comments. 
+If you are confused about source organization, build steps, modules, etc, *every* HTML, partial, `.js`, and `.scss` file includes thorough comments. 
 
 For more detailed information on the Gulp Asset Pipeline, see the [README in the `assets` folder](https://github.com/rdwatters/hugo-starter/tree/master/assets).
 
 ## What This Kit Is **Not**
 
-This kit is not a theme. The kit is for those who want to build their site's style from scratch.
+This kit is not a theme. This kit is for those who want to build their site's style from scratch.
 
 This kit is not a replacement for the [official Hugo Documentation](http://gohugo.io/overview/introduction/). If you are new to Hugo, I'd recommend reading the documentation first. If you have questions related to building your site, join the [Hugo Discuss Forum](https://discuss.gohugo.io/). 
 
 This kit is (probably) not as friendly to PC users since my development experience is limited to OSX. This is a shortcoming on my part. I'll continue to develop the documentation to be cross-platform. Feel free to submit a pull request :smiley:.
 
-> **Note:** The workflow inherent in the build process is my own and reflects my own biases. This kit might be too opinionated or constricting for seasoned developers. My hope is that the kit will save beginners time by providing sane defaults.
+> **Note:** The workflow inherent in the build process is my own and reflects my own biases. This kit might be too opinionated or restrictive for seasoned developers. My intent is to save beginners time by providing sane defaults.
 
 ## Requirements
 
-* Hugo. [Here are the directions for installation](https://gohugo.io/overview/installing/).
-* Node.js. You can download and install via the [Node.js installer page](https://nodejs.org/en/download/). Installation from the Node.js website includes NPM, the package manager for Node. You will need both to run the asset pipeline.
-* Git. Put your project in version control if you're willing to do more than download the zip.
+* Hugo. [The Hugo site provides installation instructions](https://gohugo.io/overview/installing/).
+* Node.js. You can download and install Node via the [Node.js installer page](https://nodejs.org/en/download/). Installation includes NPM, the package manager for Node. You will need both to run the asset pipeline.
+* Git. Put your project in version control if you're willing to do more than download the zip. I cannot emphasize this enough.
 
-> If this is your first experience with any of the above tools, I'd recommend installing Node.js, Hugo, *and* Git via the [Homebrew Package Manager](https://github.com/Homebrew/homebrew/tree/master/share/doc/homebrew#readme)
+> If this is your first experience with any of the above tools, I'd recommend installing Node.js, Hugo, *and* Git via the [Homebrew Package Manager for OSX](https://github.com/Homebrew/homebrew/tree/master/share/doc/homebrew#readme)
 
 ## Getting Started
 
-From the command line...
+Once you've installed all the requirements - 
 
 * `cd ~/path/to/your/site/directory/`
 * `git clone https://github.com/rdwatters/hugo-starter`
@@ -66,9 +66,9 @@ From the command line...
     * Site scripts with conditional templating to add page- or section-specific scripts
     * Social media list with SVG icons
 
-### `temp` Section  in `content` with `temp-stylesheets` and `alt-scripts`
+### `/content/temp/` Section with `temp-stylesheets` and `alt-scripts`
 
-* `temp/` allows for singleton pages with alternative stylesheets and scripts that can be created at the page level 
+* `/content/temp/` allows for singleton pages requiring alternative stylesheets and scripts
 * `temp` creates one-off pages with convenient short URLs (see `[permalinks]` in `config.toml`)
 
 ## `config.toml`
@@ -85,6 +85,11 @@ From the command line...
 * 30 svg icons in `partials/svg_icons` for easier embedding and styling via CSS, resolution independence, and fewer HTTP requests 
 * On your first `hugo server`, all social media icons in the bottom left are pulled from the SVG icon directory
 * Font Awesome Version 4.5.0 (`/assets/scss/fontawesome/\*scss & `/static/css/fonts/fontawesome` for actual font files)
+
+## Open Source Fonts
+
+* `/static/css/fonts/` includes Open Sans, Lato, Montserrat, Noto Serif, Raleway, Roboto, Source Sans Pro, and Ubuntu.
+* `/assets/scss/modules/_font-face.scss` has been created with a naming convention so that you can include the font of your choice with a single `$font` variable in `variables.scss`. See the comments in both `_font-face.scss` and `variables` for more details.
 
 ## Utilities
 
