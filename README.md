@@ -16,7 +16,7 @@ This kit is not a replacement for the [official Hugo Documentation](http://gohug
 
 This kit is (probably) not as friendly to PC users since my development experience is limited to OSX. This is a shortcoming on my part. I'll continue to develop the documentation to be cross-platform. Feel free to submit a pull request :smiley:.
 
-> **Note:** The workflow inherent in the build process is my own and reflects my own biases. This kit might be too opinionated or restrictive for seasoned developers. My intent is to save beginners time by providing sane defaults.
+> **Note:** The workflow inherent in the build process is my own and reflects my own biases. This kit may be too opinionated or restrictive for seasoned developers. My intent is to save beginners time by providing sane defaults.
 
 ## Requirements
 
@@ -50,7 +50,7 @@ Once you've installed all the requirements -
 ### Global Partials
 
 * Create your pages with `{{ partial "site_header.html" }}` and `{{ partial "site_footer.html" }}` on all single or list layouts 
-* `site_header.html` includes the following partials:
+* `site_header.html` includes the following:
     * Metadata:
         * Favicons
         * [OGP](http://ogp.me/) for social sharing
@@ -84,7 +84,7 @@ Once you've installed all the requirements -
 
 * 30 svg icons in `partials/svg_icons` for easier embedding and styling via CSS, resolution independence, and fewer HTTP requests 
 * On your first `hugo server`, all social media icons in the bottom left are pulled from the SVG icon directory
-* Font Awesome Version 4.5.0 (`/assets/scss/fontawesome/\*scss & `/static/css/fonts/fontawesome` for actual font files)
+* Font Awesome Version 4.5.0 (`/assets/scss/fontawesome/\*scss & `/static/css/fonts/fontawesome` for actual font files). You can search the full list of icons [here](https://fortawesome.github.io/Font-Awesome/icons/).
 
 ## Open Source Fonts
 
