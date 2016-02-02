@@ -1,6 +1,6 @@
 # Hugo Starter Kit with Gulp Asset Pipeline
 
-## What This Kit Is
+## About This Kit
 
 This kit includes basic boilerplate for creating static sites with [Hugo](https://gohugo.io/). 
 
@@ -24,7 +24,7 @@ This kit is (probably) not as friendly to PC users since my development experien
 * Node.js. You can download and install Node via the [Node.js installer page](https://nodejs.org/en/download/). Installation includes NPM, the package manager for Node. You will need both to run the asset pipeline.
 * Git. Put your project in version control if you're willing to do more than download the zip. I cannot emphasize this enough.
 
-> If this is your first experience with any of the above tools, I'd recommend installing Node.js, Hugo, *and* Git via the [Homebrew Package Manager for OSX](https://github.com/Homebrew/homebrew/tree/master/share/doc/homebrew#readme)
+> **Note:** If this is your first experience with any of the above tools, I'd recommend installing Node.js, Hugo, *and* Git via the [Homebrew Package Manager for OSX](https://github.com/Homebrew/homebrew/tree/master/share/doc/homebrew#readme)
 
 ## Getting Started
 
@@ -43,18 +43,18 @@ Once you've installed all the requirements -
 
 * CSS reset
 * SASS compiling with minification and autoprefixer 
-* `variables.scss` with basic media query, 
-
+* `variables.scss` for easier customization
 * [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/) Mixins 
-* JavaScript concatenation, minification, and [ES6 transpilation](https://babeljs.io/)
+* JavaScript concatenation, minification, and [ES2015 transpilation](https://babeljs.io/)
 
 ### Global Partials
 
 * Create your pages with `{{ partial "site_header.html" }}` and `{{ partial "site_footer.html" }}` on all single or list layouts 
-* `site_header.html` includes the following:
+* `site_header.html` includes the following partials:
     * Metadata:
         * Favicons
         * [OGP](http://ogp.me/) for social sharing
+        * [Swiftype V2 Metadata](https://swiftype.com/documentation/meta_tags2). This can be removed if you do not intend to use Swiftype.
     * Site stylesheet
         * Via `<link rel="stylesheet">` OR direct embed for critical render path. See comment in `config.toml` for more directions
     * Site `<header>`:
