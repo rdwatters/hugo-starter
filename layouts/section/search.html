@@ -1,0 +1,14 @@
+{
+{{ $totalPages := .Site.Pages | len }}
+{{ $pageLength := sub $totalPages 1 }}
+<h3>{{ $pageLength }}</h3>
+{{ range .Site.Pages }}
+	{"title":"{{.Title}}",
+		"description":"{{.Description}}",
+		"publishdate":"{{.Date.Format "2006-01-02"}}",
+		"theIndex":{{.}}
+		}
+
+{{ end }}
+}
+

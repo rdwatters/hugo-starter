@@ -1,3 +1,4 @@
+# Only one archetype (posts) is included in Hugo Starter
 archetypedir = "archetypes"
 baseurl = ""
 buildDrafts = true
@@ -25,22 +26,23 @@ watch = true
 
 [permalinks]
   # The temp folder is created for one-off pages (eg, marketing and design-heavy pages that run outside other site templates). Keep in mind that all .md pages under temp still require title and date in the YAML/front matter
-  temp = "/:title/"
+  singletons = "/:title/"
 
 [params]
 	AuthorName = ""
   # BEGIN SOCIAL
   # For each social account, use the full URL that leads to the homepage of your account/profile
 	GitHub = "https://github.com"
-  Twitter = "https://twitter.com/ryandwatters"
+  Twitter = "https://twitter.com/"
   Facebook = "https://facebook.com/"
   YouTube = "https://youtube.com"
   GooglePlus = "https://plus.google.com/"
   # For LinkedIn, you'll need to make sure you are using the URL for visitors, rather than the URL once you're signed into your account.
   LinkedIn = "https://linkedin.com"
-  Instagram = "https://www.instagram.com/?hl=en"
+  Instagram = "https://www.instagram.com"
   Tumblr = "https://www.tumblr.com/"
-  Pinterest = "https://pinterest.com"
+  Pinterest = "https://pinterest.com/"
+  # END SOCIAL
   # The Copyright Year is Automatically Generated based on {{ .Site.LastChange }} and is included in layouts/partials/global_foot/site_copyright.html
   CopyrightLine = ""
   SiteDescription = "This is a Hugo starter kit developed by Ryan Watters"
@@ -52,6 +54,8 @@ watch = true
   UseDisqus = true
   disqusShortname = ""
   SitePublishDate = "2016-01-01"
+  # Setting this to true will include 
+  Swiftype = true
 
 [blackfriday]
 	plainIDAnchors = true

@@ -4,19 +4,19 @@
 
 This kit includes basic boilerplate for creating static sites with [Hugo](https://gohugo.io/). 
 
-If you are confused about source organization, build steps, modules, etc, *every* HTML, partial, `.js`, and `.scss` file includes thorough comments. 
+If you are confused about source organization, build steps, modules, etc, every partial, `.js`, and `.scss` file includes thorough comments. 
 
 For more detailed information on the Gulp Asset Pipeline, see the [README in the `assets` folder](https://github.com/rdwatters/hugo-starter/tree/master/assets).
 
-## What This Kit Is **Not**
+## What This Kit Is *Not*
 
 This kit is not a theme. This kit is for those who want to build their site's style from scratch.
 
 This kit is not a replacement for the [official Hugo Documentation](http://gohugo.io/overview/introduction/). If you are new to Hugo, I'd recommend reading the documentation first. If you have questions related to building your site, join the [Hugo Discuss Forum](https://discuss.gohugo.io/). 
 
-This kit is (probably) not as friendly to PC users since my development experience is limited to OSX. This is a shortcoming on my part. I'll continue to develop the documentation to be cross-platform. Feel free to submit a pull request :smiley:.
+This kit is (probably) not as friendly to PC users since my development experience is limited to OSX. This is a shortcoming on my part. I'll continue to develop the documentation to be cross-platform.
 
-> **Note:** The workflow inherent in the build process is my own and reflects my own biases. This kit may be too opinionated or restrictive for seasoned developers. My intent is to save beginners time by providing sane defaults.
+> **Note:** The workflow inherent in the build process is my own and reflects my own biases. This kit may be too opinionated for seasoned developers. My intent is to provide sane defaults and save beginners time.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ This kit is (probably) not as friendly to PC users since my development experien
 
 ## Getting Started
 
-Once you've installed all the requirements - 
+Once you've installed the requirements - 
 
 * `cd ~/path/to/your/site/directory/`
 * `git clone https://github.com/rdwatters/hugo-starter`
@@ -66,9 +66,9 @@ Once you've installed all the requirements -
     * Site scripts with conditional templating to add page- or section-specific scripts
     * Social media list with SVG icons
 
-### `/content/temp/` Section with `temp-stylesheets` and `alt-scripts`
+### `/content/singletons/` Section with `singletons-stylesheets` and `alt-scripts`
 
-* `/content/temp/` allows for singleton pages requiring alternative stylesheets and scripts
+* `/content/singletons/` allows for singleton pages requiring alternative stylesheets and scripts
 * `temp` creates one-off pages with convenient short URLs (see `[permalinks]` in `config.toml`)
 
 ## `config.toml`
@@ -84,7 +84,7 @@ Once you've installed all the requirements -
 
 * 30 svg icons in `partials/svg_icons` for easier embedding and styling via CSS, resolution independence, and fewer HTTP requests 
 * On your first `hugo server`, all social media icons in the bottom left are pulled from the SVG icon directory
-* Font Awesome Version 4.5.0 (`/assets/scss/fontawesome/\*scss & `/static/css/fonts/fontawesome` for actual font files). You can search the full list of icons [here](https://fortawesome.github.io/Font-Awesome/icons/).
+* Font Awesome Version 4.5.0 (`/assets/scss/fontawesome/\*scss` & `/static/css/fonts/fontawesome` for actual font files). You can search the full list of icons [here](https://fortawesome.github.io/Font-Awesome/icons/).
 
 ## Open Source Fonts
 

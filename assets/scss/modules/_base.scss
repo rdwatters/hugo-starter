@@ -41,6 +41,7 @@ blockquote {
     border-left:$blockquote-left-border;
     font-size:$blockquote-font-size;
     position:relative;
+    font-family:$blockquote-font-family;
 }
 //This relates to the blockquote-styling-based-on-hyphen-position.js in assets/js/modules. This script finds the text after " - " in blockquote > p and wraps the remaining text in a <cite> tag for more specialized styling to show the source of the block quote (if necessary). Comment out or simply delete the javascript module and the following if you don't want to extend Markdown in this fashion.
 blockquote cite {
@@ -50,4 +51,15 @@ blockquote cite {
     position:absolute;
     right:5px;
     bottom:5px;
+}
+
+input[type=search]{
+    background-color:$body-background;
+    &:focus {
+        outline:none;
+        border:0px;
+    }
+    @include placeholder {
+        color:$input-placeholder-text-color;
+    }
 }

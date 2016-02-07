@@ -1,0 +1,15 @@
+abrilfatface
+fontawesome
+fonts.txt
+lato
+merriweather
+montserrat
+notoserif
+opensans
+playfairdisplay
+pnov
+ptsans
+raleway
+roboto
+sourcesanspro
+ubuntu

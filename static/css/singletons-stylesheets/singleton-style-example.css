@@ -1,0 +1,10 @@
+/*Sample temp page css. Called out in the front matter (ie, temp_stylesheet:) of content/temp/temp-example-page.md. This is strictly for demonstration purposes and can be deleted:); */
+
+h1 {
+	color:orange;
+	font-family:"Georgia",serif;
+}
+
+p {
+	font-family:"Georgia",serif;
+}

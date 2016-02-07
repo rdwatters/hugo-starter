@@ -1,3 +1,16 @@
 {{ partial "site_head.html" . }}
 <!-- Your Default List Layout Here -->
+<main class="main">
+	<!-- The swiftype attributes in this sample can be removed if you are not using Swiftype as your site search. -->
+  <article data-swiftype-name="body" data-swiftype-type="text">
+   <h1>{{ .Title }}</h1>
+        <ul class="content-list">
+            {{ range .Data.Pages }}
+                <li><a href="{{ .Permalink }}"><h3>{{.Title}}</h3></a>
+								<p>{{ .Description }}</p>
+                </li>
+            {{ end }}
+        </ul>
+  </article>
+</main>
 {{ partial "site_footer.html" . }}

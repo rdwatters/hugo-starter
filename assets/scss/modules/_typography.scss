@@ -7,9 +7,11 @@ h5,
 h6 {
     font-family: $heading-font-family;
     margin-bottom: 0px;
+    display:block;
 }
 
 h1 {
+    text-transform: $h1-text-transform;
     font-size: $h1-sm-screen;
     @include MQ(M) {
         font-size: $h1-m-screen;
@@ -20,6 +22,7 @@ h1 {
 }
 
 h2 {
+    text-transform: $h2-text-transform;
     font-size: $h2-sm-screen;
     @include MQ(M) {
         font-size: $h2-m-screen;
@@ -30,6 +33,7 @@ h2 {
 }
 
 h3 {
+    text-transform: $h3-text-transform;
     font-size: $h3-sm-screen;
     @include MQ(M) {
         font-size: $h3-m-screen;
@@ -41,6 +45,7 @@ h3 {
 
 
 h4 {
+    text-transform: $h4-text-transform;
     font-size: $h4-sm-screen;
     @include MQ(M) {
         font-size: $h4-m-screen;
@@ -51,6 +56,7 @@ h4 {
 }
 
 h5 {
+    text-transform: $h5-text-transform;
     font-size: $h5-sm-screen;
     @include MQ(M) {
         font-size: $h5-m-screen;

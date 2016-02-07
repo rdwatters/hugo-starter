@@ -1,0 +1,18 @@
+{{ partial "site_head.html" . }}
+<main class="main">
+	<article>
+		<header>
+			<h1>Tags</h1>
+		</header>
+		<ul class="site-tags">
+	    {{ $data := .Data }}
+	    {{ range $key,$value := .Data.Terms.ByCount }}
+	    <li class="site-tag">
+			<a href="/tags/{{ $value.Name | urlize }}">{{ $value.Name }}, {{ $value.Count }}</a>
+			</li>
+	    {{ end }}
+	  </ul>
+	</article>
+</main>
+
+{{ partial "site_footer.html" . }}

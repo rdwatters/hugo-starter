@@ -20,24 +20,34 @@ $anchor-weight:bold;
 $anchor-transition:0.3s;
 
 // BODY 
-$body-background:$white;
+$body-background:#fafafa;
 $footer-height:80px;
 
 // TYPOGRAPHY
 // See comments in /assets/scss/modules/_font-face.scss for naming conventions 
-// Include fonts = "raleway","ubuntu","notoserif","opensans",and "lato"
-$font: "pnov";
+// Included fonts = abrilfatface, fontawesome, lato, merriweather, montserrat, notoserif, opensans, playfairdisplay, pnov, ptsans, raleway, roboto, sourcesanspro, and ubuntu
+$font: "raleway";
+$include-second-font: false;//This needs to be set to true to include the following value
+$second-font: "abrilfatface";
 $base-font-size: 18px; //This sets your REM value for all HTML
-$base-font-family: $font,Arial,helvetica,sans-serif;
+$base-font-family: $font,'helvetica Neue', Helvetica, Arial, sans-serif;
 $base-font-weight: 400;
-$base-font-color: #000000;
+$base-font-color: #333333;
 $base-line-height: 1.5;
 
 //HEADINGS
 $heading-font-family: $base-font-family;
-$heading-font-color: #444444;
+$heading-font-color: $base-font-color;
 $heading-font-weight: 700;
-//Heading Font Sizes
+
+//Heading Text Transforms
+$h1-text-transform:none;
+$h2-text-transform:none;
+$h3-text-transform:none;
+$h4-text-transform:none;
+$h5-text-transform:none;
+
+//Heading Font Sizes (1 rem = $base-font-size [above])
 $h1-sm-screen:1.8rem;
 $h1-m-screen:2.2rem;
 $h1-l-screen:2.5rem;
@@ -58,3 +68,7 @@ $h5-l-screen:1.3rem;
 $blockquote-bg:darken($body-background,10%);
 $blockquote-left-border:3px solid $brand;
 $blockquote-font-size: 1.2em;
+$blockquote-font-family: $base-font-family;
+
+//Search
+$input-placeholder-text-color:lighten($base-font-color,45%);

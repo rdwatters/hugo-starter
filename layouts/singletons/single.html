@@ -1,0 +1,15 @@
+<!-- The 'singletons' folder is created for one-off pages that otherwise don't fit into the rest of your site structure/templates (eg, promotional pages that would require a short ULR). The permalink for singleton pages is set /:title/ (see config.toml) rather than using the filename for the slug. With the default settings, you don't need to create a list page for singleton pages since the idea is that these one-off pages are not logically related.
+
+The partials below assumes singletons will include the same chrome (ie, site head, site header, and site footer) as the rest of the site. 
+
+NOTE: Singleton permalinks are set to the title of the markdown in config.toml. The rest of Hugo starter uses slug/filename for permalinks. You can change this setting in config.toml via, eg, "/:title/" to temp = "/:filename/"-->
+
+{{ partial "site_head.html" . }}
+<main class="main">
+	{{.Content}}
+</main>
+{{ partial "site_footer.html" . }}
+
+
+<!-- If you want your singleton pages to be standalone HTML (ie, without site chrome), delete {{ partial "site_head.html" . }} and  {{ partial "site_footer.html" . }} and leave only {{.Content}}" in the template.-->
+

@@ -1,11 +1,13 @@
 {{ partial "site_head.html" . }}
-<!-- Simple starter layout for your single content files. Delete if needed.  -->
+<!-- Basic starter layout for single content files. Delete if needed.-->
 <main class="main">
-	<!-- The swiftype attributes in this sample can be removed if you are not using Swiftype as your site search. -->
-	<article data-swiftype-name="body" data-swiftype-type="text">
+	<!-- Swiftype attributes will only show if Swiftype = true in config.toml. -->
+	<article {{if .Site.Params.Swiftype }}data-swiftype-name="body" data-swiftype-type="text" {{ end}}>
 		<header>
-			<h1>{{.Title}}</h1>
-			<p>{{.Description}}</p>
+			<h1>{{ .Title }}</h1>
+			{{ range where .Site.Pages "RelPermalink" .Params.parent }}
+        <a href="{{ .Permalink }}">⇡ {{ .Title }}</a>
+      {{ end }}
 		</header>
 		{{ .Content }}
 	</article>

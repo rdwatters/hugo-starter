@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
 	{{ partial "site_head/metadata.html" . }}
-	{{ partial "site_head/swiftype.html" . }}
+	{{ if .Site.Params.Swiftype }}
+		{{ partial "site_head/swiftype.html" . }}
+	{{ end }}
 	{{ partial "site_head/favicons.html" . }}
 	<!-- site_style can be configured for critical render path using your config.toml file. For more details, see partials/global_head/site_style.html -->
 	{{ partial "site_head/site_style.html" . }}
-	<!-- Set IncldueJQ in config.toml to false to include jQuery in your site. Default = true. For simple class switching, classlist.js is already inside assets/js/modules.-->
+	<!-- Set IncludeJQ in config.toml to true to include jQuery in your site. Default = true. For simple class switching, classlist.js is already inside assets/js/modules.-->
 	{{ if .Site.Params.IncludeJQ }}
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	{{ end }}
 </head>
 <body>
 <header class="site-header">
-	<a href="/" id="home-button">Home</a>
-	{{ partial "site_head/site_navigation.html" . }}
-	{{ partial "site_head/site_search_form.html" . }}    
+		<a href="/" id="home-button">Home</a>
+		{{ partial "site_head/site_navigation.html" . }}
+		{{ partial "site_head/site_search_form.html" . }}    
 </header>
