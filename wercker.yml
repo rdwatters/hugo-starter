@@ -27,6 +27,7 @@ build:
   - arjen/hugo-build:
     version: "0.15"
     config: config.toml
+    disable_pygments: true
 
     # Gets the dependencies
     # - script:
