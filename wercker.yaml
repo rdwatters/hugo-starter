@@ -24,22 +24,24 @@ build:
     # Sets the go workspace and places you package
     # at the right place in the workspace tree
   steps:
-  - arjen/hugo-build@1.8.1
+  - arjen/hugo-build:
+    version: "0.15"
+    config: config.toml
 
     # Gets the dependencies
-    - script:
-        name: go get
-        code: |
-          go get
+    # - script:
+    #     name: go get
+    #     code: |
+    #       go get
 
-    # Build the project
-    - script:
-        name: go build
-        code: |
-          go build ./...
+    # # Build the project
+    # - script:
+    #     name: go build
+    #     code: |
+    #       go build ./...
 
-    # Test the project
-    - script:
-        name: go test
-        code: |
-          go test ./...
+    # # Test the project
+    # - script:
+    #     name: go test
+    #     code: |
+    #       go test ./...
