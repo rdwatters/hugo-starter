@@ -9,7 +9,9 @@ var rename = require('gulp-rename');
 var plumber = require('gulp-plumber');
 var autoprefixer = require('gulp-autoprefixer');
 var gutil = require('gulp-util');
-var markdown = require('gulp-markdown-to-json');
+
+//Markdown to json task
+// var markdown = require('gulp-markdown-to-json');
 
 
 // Compile Sass; note sass options to prevent server from breaking when you fudge a css rule
@@ -42,19 +44,20 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('../static/js'));
 });
 
-gulp.task('markdown', function() {
-  gulp.src('../content/**/*.md')
-    .pipe(gutil.buffer())
-    .pipe(markdown('search-index.json'))
-    .pipe(gulp.dest('../static/'))
-});
+//Markdown to json task
+// gulp.task('markdown', function() {
+//   gulp.src('../content/**/*.md')
+//     .pipe(gutil.buffer())
+//     .pipe(markdown('search-index.json'))
+//     .pipe(gulp.dest('../static/'))
+// });
 
 //the default "compile" task for sass and js
 gulp.task('compile', ['sass', 'scripts'], function() {
   gulp.watch(['scss/*.scss', 'scss/modules/*scss'], ['sass']);
   gulp.watch("scss/partials/*.scss", ['sass']);
   gulp.watch("js/modules/*.js", ['scripts']);
-  gulp.watch("../content/**/*.md", ['markdown']);
+  // gulp.watch("../content/**/*.md", ['markdown']);
 });
 
 // Default Task
