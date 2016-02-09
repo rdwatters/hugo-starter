@@ -8,5 +8,8 @@
     <p>For more information, see the README files in the <a href="https://github.com/rdwatters/hugo-starter" target="_blank"><i class="fa fa-github"></i> GitHub repository. &rarr;</a></p>
   </article>
 </main>
+{{ range $key,$value := .Site.Taxonomies }}
+<li><a href="/{{$key}}">{{ $key }} {{ len $value }}</a></li>
+{{ end }}
 <!-- Note: site_footer.html includes up to and including the closing </body> tag; hence, the omission of the closing body tag. -->
 {{ partial "site_footer.html" . }}

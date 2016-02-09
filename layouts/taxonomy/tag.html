@@ -7,7 +7,7 @@
 		<h1>Tagged with "{{ .Title }}"</h1>
 	</header>
 	<ul>
-	   Sorts pages by .PublishDate, with the most recent publish first. 
+	   <!-- Sorts pages by .PublishDate, with the most recent publish first.  -->
 	    {{ range sort .Data.Pages "PublishDate" "desc" }}
 	        <li><a href="{{.Permalink}}"><h1>{{ .Title }}</h1><time>{{ .PublishDate.Format "January 2, 2006" }}</time></a><p>{{ .Description }}</p></li>
 	    {{ end }}
