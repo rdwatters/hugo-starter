@@ -11,7 +11,7 @@ comments: true
 
 ### Sample Content Heading
 
-The following are quotes from *One Flew Over the Cuckoo's Nest*: "Man, when you lose your laugh you lose your footing. All I know is this: nobody's very big in the first place, and it looks to me like everybody spends their whole life tearing everybody else down. But it's the truth even if it didn't happen. He knows that you have to laugh at the things that hurt you just to keep yourself in balance, just to keep the world from running you plumb crazy." 
+Showing Nathan how we can use Wercker and an SSG to automate HTML snippet creation for UCM. 
 
 
 #### Sample Content Subheading 
