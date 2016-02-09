@@ -8,6 +8,14 @@ build:
 deploy :
   steps :
     - script:
+        name: Configure git
+        code: |-
+          git config --global user.email "ryan@ryansportfol.io"
+          git config --global user.name "rdwatters"
+
+          # remove current .git folder
+          rm -rf .git
+    - script:
         name: Deploy to html branch
         code: |-
           git init
