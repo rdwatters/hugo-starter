@@ -5,3 +5,12 @@ build:
     version: "0.15"
     config: config.toml
     disable_pygments: true
+deploy:
+  steps:
+    - install-packages:
+      packages: git ssh-client
+    - leipert/git-push:
+       gh_oauth: $GIT_TOKEN
+       repo: https://github.com/rdwatters/hugo-starter
+       branch: html
+       basedir: .
