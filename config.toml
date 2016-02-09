@@ -7,8 +7,8 @@ canonifyurls = true
 config = "config.toml"
 contentdir = "content"
 disableLiveReload= false
-disableRSS = false
-disableSitemap = false
+disableRSS = true
+disableSitemap = true
 ignoreFiles = []
 languageCode = "en-us"
 layoutDir = "layouts"
@@ -45,7 +45,7 @@ watch = true
   # END SOCIAL
   # The Copyright Year is Automatically Generated based on {{ .Site.LastChange }} and is included in layouts/partials/global_foot/site_copyright.html
   CopyrightLine = ""
-  SiteDescription = "This is a Hugo starter kit developed by Ryan Watters"
+  SiteDescription = "This is a Hugo starter kit developed by Ryan Watters, https://www.github.com/rdwatters"
   # If true, the gulp build will write minified CSS to an html file titled "style-embed-for-crp-only.html" to layouts/partials that will write to a <style> tag in each html <head>. If set to false, the css is not embedded in each page but instead includes an external call to <link rel="stylesheet" href="{{.Site.BaseURL}}/css/style.min.css"> 
   UseCRP = false
   # Include the jQuery CDN in the <head> of your site?
@@ -54,13 +54,13 @@ watch = true
   UseDisqus = true
   disqusShortname = ""
   SitePublishDate = "2016-01-01"
-  # Setting this to true will include 
+  # Setting this to true will include Swiftype Metadata in <head> and the default single.html in layouts/_default
   Swiftype = true
 
 [blackfriday]
 	plainIDAnchors = true
 	hrefTargetBlank = true
-  angledQuotes = true
+  angledQuotes = false
   latexDashes = true
 
 [taxonomies]
