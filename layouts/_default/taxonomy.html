@@ -3,8 +3,9 @@
 <main class="main">
 	<article>
 	<header>
-		<a href="/tags/" title="See all site content by tag."><i class="fa fa-tags"></i> See all tags</a>
-		<h1>Tagged with "{{ .Title }}"</h1>
+		{{ $data := .Data }}
+		<a href="/{{$data.Plural}}/" title="See all site content by tag.">See all {{ $data.Plural }}</a>
+		<h1>{{$data.Plural}}: {{ .Title }}</h1>
 	</header>
 	<ul>
 	   <!-- Sorts pages by .PublishDate, with the most recent publish first.  -->

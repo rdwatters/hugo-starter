@@ -5,7 +5,9 @@ description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum qui
 author: Jon Doe
 date: 2016-01-16
 publishDate: 2016-02-01
-tags: [javascript,programming,html]
+author: John Doe
+categories: [category 1, category 2]
+tags: [tag 1, tag 2]
 comments: true
 ---
 

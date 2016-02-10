@@ -12,7 +12,7 @@ deploy:
     - leipert/git-push:
        gh_oauth: $GIT_TOKEN
        repo: rdwatters/hugo-starter
-       branch: html-snippets
+       branch: gh-pages
        basedir: public
 
 # git config --global user.email "rdwatters@users.noreply.github.com"
