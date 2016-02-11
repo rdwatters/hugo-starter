@@ -5,6 +5,10 @@ build:
     version: "0.15"
     config: config.toml
     disable_pygments: true
+  - script:
+    name: echo "Moving json/index.html to json/site-index.json"
+    code: |
+      cd public/json/ && cp index.html site-index.json
 deploy:
   steps:
     - install-packages:

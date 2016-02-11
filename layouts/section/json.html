@@ -1,0 +1,8 @@
+[{{ range $index, $page := .Site.Pages }}{{ if ne $page.Type "json" }}{{ if $index }},{{ end }}
+{
+    "href": "{{ $page.Permalink }}",
+    "title": "{{ $page.Title }}",
+    "tags": [{{ range $tindex, $tag := $page.Params.tags }}{{ if $tindex }}, {{ end }}"{{ $tag }}"{{ end }}],
+    "categories": [{{ range $cindex, $category := $page.Params.categories }}{{ if $cindex }}, {{ end }}"{{ $category }}"{{ end }}],
+    "content": "{{ $page.PlainWords }}"
+}{{ end }}{{ end }}]

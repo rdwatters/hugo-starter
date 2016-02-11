@@ -1,5 +1,5 @@
 /**
- * Blockquote styling function (IIFE). This looks for a hyphen in all "blockquote > p", assumes the hyphen indicates attribution (requires one space on both sides of the hyphen; eg - "Here is a quote by a famous person. - Famous Person"), and then wraps the remaining text in cite.quote-attribution for additional styling. The text in the new span is preceded by a horizontal bar (aka "quotation dash" [&#x2015; in HTML]). This is a tiny client-side extension of markdown's blockquote syntax.
+ * Blockquote styling function (IIFE). This looks for a hyphen in all "blockquote > p", assumes the hyphen indicates attribution (requires one space on both sides of the hyphen; eg - "Here is a quote by a famous person. - Famous Person"), and then wraps the remaining text in cite.quote-attribution for additional styling. The text in the new span is preceded by a horizontal bar (aka "quotation dash" [&#x2015; in HTML]). This is a tiny client-side extension of markdown's blockquote syntax. The resulting HTML will then include a blockquote > p > cite.blockquote-citation for separate styling (and improved semantics).
  */
 (function() {
   //assign all blockquote content to an html collection/variable 
@@ -16,7 +16,7 @@
       //newAuthorAttr === text after hyphen
       var newAuthorAttr = blockQuotes[i].innerHTML.split(' - ')[1];
       //fill blockquote paragraph with new content, but now with a <cite> wrapper around the author callout. 
-      blockQuotes[i].innerHTML = newQuoteContent + '<cite> &#x2015; ' + newAuthorAttr + '</cite>';
+      blockQuotes[i].innerHTML = newQuoteContent + '<cite class="blockquote-citation"> &#x2015; ' + newAuthorAttr + '</cite>';
     }
   }
 })();
