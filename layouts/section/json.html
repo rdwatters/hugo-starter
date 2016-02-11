@@ -4,5 +4,5 @@
     "title": "{{ $page.Title }}",
     "tags": [{{ range $tindex, $tag := $page.Params.tags }}{{ if $tindex }}, {{ end }}"{{ $tag }}"{{ end }}],
     "categories": [{{ range $cindex, $category := $page.Params.categories }}{{ if $cindex }}, {{ end }}"{{ $category }}"{{ end }}],
-    "content": "{{ $page.PlainWords }}"
+    "content": "{{ $page.Plain }}"
 }{{ end }}{{ end }}]

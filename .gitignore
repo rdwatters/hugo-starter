@@ -1,3 +1,4 @@
 assets/node_modules/
 static/css/fonts/proxnova/
+build-and-deploy-hugo.sh
 my-notes.md
