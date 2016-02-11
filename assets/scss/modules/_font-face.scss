@@ -1,10 +1,10 @@
     /******
-    To use your own fonts, add files to /static/css/fonts/fontname/
+    To use your own fonts, add files to /static/assets/css/fonts/fontname/
     To leverage the flexibility of changing the font in variables.scss, you will need to follow a naming convention for the font you are using, for example - 
 
-    * /static/css/fonts/fontnamewithoutspaces/fontnamewithoutspaces-light-webfont.ttf
-    * /static/css/fonts/fontnamewithoutspaces/fontnamewithoutspaces-regular-webfont.ttf (your "normal" or 400 font-weight)
-    * /static/css/fonts/fontnamewithoutspaces/fontnamewithoutspaces-bold-webfont.svg
+    * /static/assets/css/fonts/fontnamewithoutspaces/fontnamewithoutspaces-light-webfont.ttf
+    * /static/assets/css/fonts/fontnamewithoutspaces/fontnamewithoutspaces-regular-webfont.ttf (your "normal" or 400 font-weight)
+    * /static/assets/css/fonts/fontnamewithoutspaces/fontnamewithoutspaces-bold-webfont.svg
     
     Then, in your variables.scss, set $font: "fontnamewithoutspaces";
     Light, regular, bold, and extrabold are set to 100, 200, 400, 700, and 900 weights, respectively.
@@ -14,113 +14,114 @@
     
     @font-face {
         font-family: "#{$font}";
-        src: url("/css/fonts/#{$font}/#{$font}-extralight-webfont.eot");
-        src: url("/css/fonts/#{$font}/#{$font}-extralight-webfont.eot?#iefix") format("embedded-opentype"),
-        url("/css/fonts/#{$font}/#{$font}-extralight-webfont.woff") format("woff"),
-        url("/css/fonts/#{$font}/#{$font}-extralight-webfont.ttf") format("truetype"),
-        url("/css/fonts/#{$font}/#{$font}-extralight-webfont.svg") format("svg");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-extralight-webfont.eot");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-extralight-webfont.eot?#iefix") format("embedded-opentype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-extralight-webfont.woff") format("woff"),
+        url("/assets/css/fonts/#{$font}/#{$font}-extralight-webfont.ttf") format("truetype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-extralight-webfont.svg") format("svg");
         font-weight: 100;
         font-style: normal
     }
     
     @font-face {
         font-family: "#{$font}";
-        src: url("/css/fonts/#{$font}/#{$font}-extralight-italic-webfont.eot");
-        src: url("/css/fonts/#{$font}/#{$font}-extralight-italic-webfont.eot?#iefix") format("embedded-opentype"),
-        url("/css/fonts/#{$font}/#{$font}-extralight-italic-webfont.woff") format("woff"),
-        url("/css/fonts/#{$font}/#{$font}-extralight-italic-webfont.ttf") format("truetype"),
-        url("/css/fonts/#{$font}/#{$font}-extralight-italic-webfont.svg") format("svg");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-extralight-italic-webfont.eot");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-extralight-italic-webfont.eot?#iefix") format("embedded-opentype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-extralight-italic-webfont.woff") format("woff"),
+        url("/assets/css/fonts/#{$font}/#{$font}-extralight-italic-webfont.ttf") format("truetype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-extralight-italic-webfont.svg") format("svg");
         font-weight: 100;
         font-style: normal
     }
     
     @font-face {
         font-family: "#{$font}";
-        src: url("/css/fonts/#{$font}/#{$font}-light-webfont.eot");
-        src: url("/css/fonts/#{$font}/#{$font}-light-webfont.eot?#iefix") format("embedded-opentype"),
-        url("/css/fonts/#{$font}/#{$font}-light-webfont.woff") format("woff"),
-        url("/css/fonts/#{$font}/#{$font}-light-webfont.ttf") format("truetype"),
-        url("/css/fonts/#{$font}/#{$font}-light-webfont.svg") format("svg");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-light-webfont.eot");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-light-webfont.eot?#iefix") format("embedded-opentype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-light-webfont.woff") format("woff"),
+        url("/assets/css/fonts/#{$font}/#{$font}-light-webfont.ttf") format("truetype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-light-webfont.svg") format("svg");
         font-weight: 200;
         font-style: normal
     }
     
     @font-face {
         font-family: "#{$font}";
-        src: url("/css/fonts/#{$font}/#{$font}-light-italic-webfont.eot");
-        src: url("/css/fonts/#{$font}/#{$font}-light-italic-webfont.eot?#iefix") format("embedded-opentype"),
-        url("/css/fonts/#{$font}/#{$font}-light-italic-webfont.woff") format("woff"),
-        url("/css/fonts/#{$font}/#{$font}-light-italic-webfont.ttf") format("truetype"),
-        url("/css/fonts/#{$font}/#{$font}-light-italic-webfont.svg") format("svg");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-light-italic-webfont.eot");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-light-italic-webfont.eot?#iefix") format("embedded-opentype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-light-italic-webfont.woff") format("woff"),
+        url("/assets/css/fonts/#{$font}/#{$font}-light-italic-webfont.ttf") format("truetype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-light-italic-webfont.svg") format("svg");
         font-weight: 200;
         font-style: italic
     }
     
     @font-face {
         font-family: "#{$font}";
-        src: url("/css/fonts/#{$font}/#{$font}-regular-webfont.eot");
-        src: url("/css/fonts/#{$font}/#{$font}-regular-webfont.eot%3f") format("embedded-opentype"),
-        url("/css/fonts/#{$font}/#{$font}-regular-webfont.woff") format("woff"),
-        url("/css/fonts/#{$font}/#{$font}-regular-webfont.ttf") format("truetype"),
-        url("/css/fonts/#{$font}/#{$font}-regular-webfont.svg") format("svg");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-regular-webfont.eot");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-regular-webfont.eot%3f") format("embedded-opentype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-regular-webfont.woff") format("woff"),
+        url("/assets/css/fonts/#{$font}/#{$font}-regular-webfont.ttf") format("truetype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-regular-webfont.svg") format("svg");
         font-weight: normal;
         font-style: normal
     }
     
     @font-face {
         font-family: "#{$font}";
-        src: url("/css/fonts/#{$font}/#{$font}-bold-webfont.eot");
-        src: url("/css/fonts/#{$font}/#{$font}-bold-webfont.eot?#iefix") format("embedded-opentype"),
-        url("/css/fonts/#{$font}/#{$font}-bold-webfont.woff") format("woff"),
-        url("/css/fonts/#{$font}/#{$font}-bold-webfont.ttf") format("truetype"),
-        url("/css/fonts/#{$font}/#{$font}-bold-webfont.svg") format("svg");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-bold-webfont.eot");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-bold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-bold-webfont.woff") format("woff"),
+        url("/assets/css/fonts/#{$font}/#{$font}-bold-webfont.ttf") format("truetype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-bold-webfont.svg") format("svg");
         font-weight: 700;
         font-style: normal
     }
     
     @font-face {
         font-family: "#{$font}";
-        src: url("/css/fonts/#{$font}/#{$font}-bold-italic-webfont.eot");
-        src: url("/css/fonts/#{$font}/#{$font}-bold-italic-webfont.eot?#iefix") format("embedded-opentype"),
-        url("/css/fonts/#{$font}/#{$font}-bold-italic-webfont.woff") format("woff"),
-        url("/css/fonts/#{$font}/#{$font}-bold-italic-webfont.ttf") format("truetype"),
-        url("/css/fonts/#{$font}/#{$font}-bold-italic-webfont.svg") format("svg");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-bold-italic-webfont.eot");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-bold-italic-webfont.eot?#iefix") format("embedded-opentype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-bold-italic-webfont.woff") format("woff"),
+        url("/assets/css/fonts/#{$font}/#{$font}-bold-italic-webfont.ttf") format("truetype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-bold-italic-webfont.svg") format("svg");
         font-weight: 700;
         font-style: italic
     }
     
     @font-face {
         font-family: "#{$font}";
-        src: url("/css/fonts/#{$font}/#{$font}-extrabold-webfont.eot");
-        src: url("/css/fonts/#{$font}/#{$font}-extrabold-webfont.eot%3f") format("embedded-opentype"),
-        url("/css/fonts/#{$font}/#{$font}-extrabold-webfont.woff") format("woff"),
-        url("/css/fonts/#{$font}/#{$font}-extrabold-webfont.ttf") format("truetype"),
-        url("/css/fonts/#{$font}/#{$font}-extrabold-webfont.svg") format("svg");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-extrabold-webfont.eot");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-extrabold-webfont.eot%3f") format("embedded-opentype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-extrabold-webfont.woff") format("woff"),
+        url("/assets/css/fonts/#{$font}/#{$font}-extrabold-webfont.ttf") format("truetype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-extrabold-webfont.svg") format("svg");
         font-weight: 900;
         font-style: normal
     }
     
     @font-face {
         font-family: "#{$font}";
-        src: url("/css/fonts/#{$font}/#{$font}-extrabold-italic-webfont.eot");
-        src: url("/css/fonts/#{$font}/#{$font}-extrabold-italic-webfont.eot%3f") format("embedded-opentype"),
-        url("/css/fonts/#{$font}/#{$font}-extrabold-italic-webfont.woff") format("woff"),
-        url("/css/fonts/#{$font}/#{$font}-extrabold-italic-webfont.ttf") format("truetype"),
-        url("/css/fonts/#{$font}/#{$font}-extrabold-italic-webfont.svg") format("svg");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-extrabold-italic-webfont.eot");
+        src: url("/assets/css/fonts/#{$font}/#{$font}-extrabold-italic-webfont.eot%3f") format("embedded-opentype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-extrabold-italic-webfont.woff") format("woff"),
+        url("/assets/css/fonts/#{$font}/#{$font}-extrabold-italic-webfont.ttf") format("truetype"),
+        url("/assets/css/fonts/#{$font}/#{$font}-extrabold-italic-webfont.svg") format("svg");
         font-weight: 900;
         font-style: italic
     }
     
     //Checks for "true" if you want to include a second font.
     @if $include-second-font {
+        //Special conditional for Abril Fatface because it only has one weight
         @if $second-font=="abrilfatface" {
             @font-face {
                 font-family: "#{$second-font}";
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.eot");
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.eot%3f") format("embedded-opentype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.woff") format("woff"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.ttf") format("truetype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.svg") format("svg");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.eot");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.eot%3f") format("embedded-opentype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.woff") format("woff"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.ttf") format("truetype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.svg") format("svg");
                 font-weight: normal;
                 font-style: normal
             }
@@ -128,91 +129,91 @@
         @else {
             @font-face {
                 font-family: "#{$second-font}";
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-extralight-webfont.eot");
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-extralight-webfont.eot?#iefix") format("embedded-opentype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-extralight-webfont.woff") format("woff"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-extralight-webfont.ttf") format("truetype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-extralight-webfont.svg") format("svg");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-extralight-webfont.eot");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-extralight-webfont.eot?#iefix") format("embedded-opentype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-extralight-webfont.woff") format("woff"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-extralight-webfont.ttf") format("truetype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-extralight-webfont.svg") format("svg");
                 font-weight: 100;
                 font-style: normal
             }
             @font-face {
                 font-family: "#{$second-font}";
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-extralight-italic-webfont.eot");
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-extralight-italic-webfont.eot?#iefix") format("embedded-opentype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-extralight-italic-webfont.woff") format("woff"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-extralight-italic-webfont.ttf") format("truetype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-extralight-italic-webfont.svg") format("svg");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-extralight-italic-webfont.eot");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-extralight-italic-webfont.eot?#iefix") format("embedded-opentype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-extralight-italic-webfont.woff") format("woff"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-extralight-italic-webfont.ttf") format("truetype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-extralight-italic-webfont.svg") format("svg");
                 font-weight: 100;
                 font-style: normal
             }
             @font-face {
                 font-family: "#{$second-font}";
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-light-webfont.eot");
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-light-webfont.eot?#iefix") format("embedded-opentype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-light-webfont.woff") format("woff"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-light-webfont.ttf") format("truetype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-light-webfont.svg") format("svg");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-light-webfont.eot");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-light-webfont.eot?#iefix") format("embedded-opentype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-light-webfont.woff") format("woff"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-light-webfont.ttf") format("truetype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-light-webfont.svg") format("svg");
                 font-weight: 200;
                 font-style: normal
             }
             @font-face {
                 font-family: "#{$second-font}";
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-light-italic-webfont.eot");
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-light-italic-webfont.eot?#iefix") format("embedded-opentype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-light-italic-webfont.woff") format("woff"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-light-italic-webfont.ttf") format("truetype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-light-italic-webfont.svg") format("svg");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-light-italic-webfont.eot");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-light-italic-webfont.eot?#iefix") format("embedded-opentype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-light-italic-webfont.woff") format("woff"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-light-italic-webfont.ttf") format("truetype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-light-italic-webfont.svg") format("svg");
                 font-weight: 200;
                 font-style: italic
             }
             @font-face {
                 font-family: "#{$second-font}";
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.eot");
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.eot%3f") format("embedded-opentype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.woff") format("woff"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.ttf") format("truetype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.svg") format("svg");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.eot");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.eot%3f") format("embedded-opentype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.woff") format("woff"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.ttf") format("truetype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-regular-webfont.svg") format("svg");
                 font-weight: normal;
                 font-style: normal
             }
             @font-face {
                 font-family: "#{$second-font}";
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-bold-webfont.eot");
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-bold-webfont.eot?#iefix") format("embedded-opentype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-bold-webfont.woff") format("woff"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-bold-webfont.ttf") format("truetype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-bold-webfont.svg") format("svg");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-bold-webfont.eot");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-bold-webfont.eot?#iefix") format("embedded-opentype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-bold-webfont.woff") format("woff"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-bold-webfont.ttf") format("truetype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-bold-webfont.svg") format("svg");
                 font-weight: 700;
                 font-style: normal
             }
             @font-face {
                 font-family: "#{$second-font}";
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-bold-italic-webfont.eot");
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-bold-italic-webfont.eot?#iefix") format("embedded-opentype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-bold-italic-webfont.woff") format("woff"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-bold-italic-webfont.ttf") format("truetype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-bold-italic-webfont.svg") format("svg");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-bold-italic-webfont.eot");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-bold-italic-webfont.eot?#iefix") format("embedded-opentype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-bold-italic-webfont.woff") format("woff"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-bold-italic-webfont.ttf") format("truetype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-bold-italic-webfont.svg") format("svg");
                 font-weight: 700;
                 font-style: italic
             }
             @font-face {
                 font-family: "#{$second-font}";
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-extrabold-webfont.eot");
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-extrabold-webfont.eot%3f") format("embedded-opentype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-extrabold-webfont.woff") format("woff"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-extrabold-webfont.ttf") format("truetype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-extrabold-webfont.svg") format("svg");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-extrabold-webfont.eot");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-extrabold-webfont.eot%3f") format("embedded-opentype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-extrabold-webfont.woff") format("woff"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-extrabold-webfont.ttf") format("truetype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-extrabold-webfont.svg") format("svg");
                 font-weight: 900;
                 font-style: normal
             }
             @font-face {
                 font-family: "#{$second-font}";
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-extrabold-italic-webfont.eot");
-                src: url("/css/fonts/#{$second-font}/#{$second-font}-extrabold-italic-webfont.eot%3f") format("embedded-opentype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-extrabold-italic-webfont.woff") format("woff"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-extrabold-italic-webfont.ttf") format("truetype"),
-                url("/css/fonts/#{$second-font}/#{$second-font}-extrabold-italic-webfont.svg") format("svg");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-extrabold-italic-webfont.eot");
+                src: url("/assets/css/fonts/#{$second-font}/#{$second-font}-extrabold-italic-webfont.eot%3f") format("embedded-opentype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-extrabold-italic-webfont.woff") format("woff"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-extrabold-italic-webfont.ttf") format("truetype"),
+                url("/assets/css/fonts/#{$second-font}/#{$second-font}-extrabold-italic-webfont.svg") format("svg");
                 font-weight: 900;
                 font-style: italic
             }
@@ -222,8 +223,8 @@
     //FONT AWESOME
     @font-face {
         font-family: 'FontAwesome';
-        src: url('/css/fonts/fontawesome/fontawesome-webfont.eot?v=4.5.0');
-        src: url('/css/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('/css/fonts/fontawesome/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), url('/css/fonts/fontawesome/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('/css/fonts/fontawesome/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('/css/fonts/fontawesome/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
+        src: url('/assets/css/fonts/fontawesome/fontawesome-webfont.eot?v=4.5.0');
+        src: url('/assets/css/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('/assets/css/fonts/fontawesome/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), url('/assets/css/fonts/fontawesome/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('/assets/css/fonts/fontawesome/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('/assets/css/fonts/fontawesome/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
         font-weight: normal;
         font-style: normal;
     }

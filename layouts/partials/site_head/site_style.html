@@ -4,9 +4,9 @@
 {{ print (partial "site_head/style-embed-for-crp-only.html" .) | safeCSS }}
 </style>
 {{ else }}
-<link rel="stylesheet" href="{{.Site.BaseURL}}/css/style.min.css">
+<link rel="stylesheet" href="{{.Site.BaseURL}}/assets/css/style.min.css">
 {{ end }}
-<!--The following will include a temp stylesheet for any one-off pages (singletons) you need to creat in content/singletons. Since this comes in after the CRP <style>(if you are using it) or the external stylesheet, these styles will override any of the site-wide styles you are using. These stylesheets can be included in a single .md file front matter using "temp_stylesheet:". One-off stylsheets need to be kept in static/css/temp-stylesheets. Note that these stylesheets are not part of the Gulp asset pipeline.-->
+<!--The following will include a stylesheet for any one-off pages (singletons) you need to create in content/singletons. Since this comes in after the CRP <style>(if you are using it) or the external stylesheet, these styles will override any of the site-wide styles you are using. These stylesheets can be included in a single .md file front matter using "temp_stylesheet:". One-off stylsheets need to be kept in static/css/temp-stylesheets. Note that these stylesheets are not part of the Gulp asset pipeline.-->
 {{ with .Params.singletons_stylesheet }}
-<link rel="stylesheet" href="/css/singletons-stylesheets/{{ . }}">
+<link rel="stylesheet" href="/assets/css/singletons-stylesheets/{{ . }}">
 {{ end }}

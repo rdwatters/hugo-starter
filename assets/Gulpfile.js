@@ -27,7 +27,7 @@ gulp.task('sass', function() {
       cascade: false
     }))
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('../static/css/'))
+    .pipe(gulp.dest('../static/assets/css/'))
     .pipe(rename('style-embed-for-crp-only.html'))
     .pipe(gulp.dest('../layouts/partials/site_head/'));
 });
@@ -41,7 +41,7 @@ gulp.task('scripts', function() {
     }))
     .pipe(uglify())
     .pipe(rename('main.min.js'))
-    .pipe(gulp.dest('../static/js'));
+    .pipe(gulp.dest('../static/assets/js'));
 });
 
 //Markdown to json task
