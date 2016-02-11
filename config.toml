@@ -42,6 +42,8 @@ watch = true
   Instagram = "https://www.instagram.com"
   Tumblr = "https://www.tumblr.com/"
   Pinterest = "https://pinterest.com/"
+  # Add your Google Analytics ID here (ie, UA-XXXXXXXX-X). See layouts/partials/google_analytics.html. Dev environment (ie, localhost) is automatically disabled.
+  GoogleAnalyticsTrackingId = ""
   # END SOCIAL
   # The Copyright Year is Automatically Generated based on {{ .Site.LastChange }} and is included in layouts/partials/global_foot/site_copyright.html
   CopyrightLine = ""
