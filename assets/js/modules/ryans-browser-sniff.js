@@ -21,6 +21,6 @@ function ryansBrowserSniff() {
     yourBrowser.innerHTML = navigator.sayswho;
     if ((navigator.sayswho.toLowerCase() === "ie 9") || (navigator.sayswho.toLowerCase() === "msie 9")) {
         document.getElementById('compat-mode').style.display = "block";
-        document.getElementById('set-mode').innerHTML = "Looks like you are using IE9. In order for you to sign up for an online account, you will need to turn on <a href=\"http://www.cap.org/web/footernav/system-requirementscompatibility\" target=\"_blank\">compatibility mode in your browser.</a>";
+        document.getElementById('set-mode').innerHTML = "Looks like you are using IE9. In order for you to sign up for an online account, you will need to turn on <a href=\"http://www.cap.org/web/footernav/system-requirements\" target=\"_blank\">compatibility mode in your browser.</a>";
     }
 }
