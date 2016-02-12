@@ -30,7 +30,7 @@ watch = true
 
 [params]
 	AuthorName = ""
-  # BEGIN SOCIAL
+  #######BEGIN SOCIAL#######
   # For each social account, use the full URL that leads to the homepage of your account/profile
 	GitHub = "https://github.com"
   Twitter = "https://twitter.com/"
@@ -44,11 +44,11 @@ watch = true
   Pinterest = "https://pinterest.com/"
   # Add your Google Analytics ID here (ie, UA-XXXXXXXX-X). See layouts/partials/google_analytics.html. Dev environment (ie, localhost) is automatically disabled.
   GoogleAnalyticsTrackingId = ""
-  # END SOCIAL
+  #######END SOCIAL#######
   # The Copyright Year is Automatically Generated based on {{ .Site.LastChange }} and is included in layouts/partials/global_foot/site_copyright.html
   CopyrightLine = ""
   SiteDescription = "This is a Hugo starter kit developed by Ryan Watters, https://www.github.com/rdwatters"
-  # If true, the gulp build will write minified CSS to an html file titled "style-embed-for-crp-only.html" to layouts/partials that will write to a <style> tag in each html <head>. If set to false, the css is not embedded in each page but instead includes an external call to <link rel="stylesheet" href="{{.Site.BaseURL}}/css/style.min.css"> 
+  # If true, site style will be embedded in a <style> tag in each html <head> by pulling in "style-embed-for-crp-only.html" partial created by default as part of the Gulp Build. If set to false, the css is not embedded in each page but instead includes an external call to <link rel="stylesheet" href="{{.Site.BaseURL}}/css/style.min.css"> 
   UseCRP = false
   # Include the jQuery CDN in the <head> of your site?
   IncludeJQ = true
@@ -56,7 +56,7 @@ watch = true
   UseDisqus = true
   disqusShortname = ""
   SitePublishDate = "2016-01-01"
-  # Setting this to true will include Swiftype Metadata in <head> and the default single.html in layouts/_default
+  # Setting this to true will include Swiftype Metadata in <head> and the default single.html <article> in layouts/_default
   Swiftype = true
 
 [blackfriday]

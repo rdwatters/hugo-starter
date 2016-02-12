@@ -9,6 +9,7 @@ author: Ryan Watters
 categories: [category 1]
 tags: [tag 1, tag 2]
 comments: true
+generatePage: false
 ---
 
 ### Sample Content Heading

@@ -9,6 +9,7 @@ author: John Doe
 categories: [category 1, category 2]
 tags: [tag 1, tag 2]
 comments: true
+generatePage: true
 ---
 
 ### Sample Content Heading
