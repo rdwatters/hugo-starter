@@ -21,7 +21,7 @@ import (
 )
 
 var (
-	root    = flag.String("root", "http://localhost:1313", "*")
+	root    = flag.String("root", "https://ryansportfol.io", "")
 	verbose = flag.Bool("verbose", false, "verbose")
 )
 
