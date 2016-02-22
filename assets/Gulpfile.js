@@ -29,7 +29,7 @@ gulp.task('sass', function() {
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('../static/assets/css/'))
     .pipe(rename('style-embed-for-crp-only.html'))
-    .pipe(gulp.dest('../layouts/partials/site_head/'));
+    .pipe(gulp.dest('../layouts/partials/site_header/'));
 });
 
 // Concatenate & Minify JS

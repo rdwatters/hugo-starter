@@ -10,6 +10,7 @@
     Light, regular, bold, and extrabold are set to 100, 200, 400, 700, and 900 weights, respectively.
     Since not all fonts might include the full range of weights, check your console errors to see which @font-face to comment out for your chosen font.
     **NOTE:**Some of the fonts included in the HUGO Starter kit do not include all of these weights. To avoid console errors, you may want to remove any weights/styles that are not included in the font family you are trying to use.
+    NOTE: FontAwesome is kept pascal case to reflect same casing in fontawesome sass library.
     ******/
     
     @font-face {

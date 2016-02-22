@@ -4,12 +4,12 @@ The partials below assumes singletons will include the same chrome (ie, site hea
 
 NOTE: Singleton permalinks are set to the title of the markdown in config.toml. The rest of Hugo starter uses slug/filename for permalinks. You can change this setting in config.toml via, eg, "/:title/" to temp = "/:filename/"-->
 
-{{ partial "site_head.html" . }}
+{{ partial "site_header.html" . }}
 <main class="main">
 	{{.Content}}
 </main>
 {{ partial "site_footer.html" . }}
 
 
-<!-- If you want your singleton pages to be standalone HTML (ie, without site chrome), delete {{ partial "site_head.html" . }} and  {{ partial "site_footer.html" . }} and leave only {{.Content}}" in the template.-->
+<!-- If you want your singleton pages to be standalone HTML (ie, without site chrome), delete {{ partial "site_header.html" . }} and  {{ partial "site_footer.html" . }} and leave only {{.Content}}" in the template.-->
 

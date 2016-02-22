@@ -15,18 +15,18 @@
 
 .site-header {
     @include fill-parent;
-    z-index:1;
-    position:relative;
+    z-index: 1;
+    position: relative;
 }
 
 .main {
     position: relative;
-    width:90%;
-    max-width:700px;
-    margin-left:auto;
-    margin-right:auto;
+    width: 90%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: $footer-height;
-    z-index:1;
+    z-index: 1;
     a {
         color: #01589B;
     }
@@ -50,3 +50,35 @@
         }
     }
 }
+
+
+span.dropcap {
+    float: left;
+    color: $accent-color;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+    padding-bottom: -5px;
+    font-family: Georgia;
+}
+
+// article {
+//     a[target="_blank"]:after {
+//         font-family: "FontAwesome";
+//         content: "\f08e";
+//         color: inherit;
+//         margin-left: 5px;
+//         font-weight: 100;
+//     }
+// }
+// article {
+//     a[href$="pdf"]:after {
+//         font-family: "FontAwesome";
+//         content: "\f1c1";
+//         color: red;
+//         margin-left: 5px;
+//         font-weight: 100;
+//     }
+// }

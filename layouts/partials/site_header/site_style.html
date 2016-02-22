@@ -1,7 +1,7 @@
 <!-- Critical Render Path (CRP). Setting UseCRP to true in your config.toml file write the minified style to the head of the page. Setting it to "false" will create the below link to the external, minified version of the stylesheet. For more information on CRP, go to https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en. Note that Hugo does not allow for writing to non-markup files, so the Gulp build writes the minified CSS for use in CRP to style-embed-for-crp-only.html.-->
 {{if .Site.Params.UseCRP }}
 <style>
-{{ print (partial "site_head/style-embed-for-crp-only.html" .) | safeCSS }}
+{{ print (partial "site_header/style-embed-for-crp-only.html" .) | safeCSS }}
 </style>
 {{ else }}
 <link rel="stylesheet" href="{{.Site.BaseURL}}/assets/css/style.min.css">

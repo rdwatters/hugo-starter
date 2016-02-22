@@ -1,8 +1,8 @@
-{{ partial "site_head.html" . }}
+{{ partial "site_header.html" . }}
 <!-- Basic starter layout for single content files. Delete if needed.-->
 <main class="main">
 	<!-- Swiftype attributes will only show if Swiftype = true in config.toml. -->
-	<article {{if .Site.Params.Swiftype }}data-swiftype-name="body" data-swiftype-type="text" {{ end}}>
+	<article class="content"{{if .Site.Params.Swiftype }}data-swiftype-name="body" data-swiftype-type="text" {{ end}}>
 		<header>
 			<h1>{{ .Title }} - {{ .Section | upper }}</h1>
 			<ul>
