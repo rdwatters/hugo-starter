@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
 	{{ partial "site_header/metadata.html" . }}
-	{{ if .Site.Params.Swiftype }}
-		{{ partial "site_header/swiftype.html" . }}
-	{{ end }}
+	{{ partial "site_header/swiftype.html" . }}
 	{{ partial "site_header/favicons.html" . }}
 	<!-- site_style can be configured for critical render path using your config.toml file. For more details, see partials/global_head/site_style.html -->
 	{{ partial "site_header/site_style.html" . }}

@@ -9,6 +9,7 @@
 @import 'modules/fontawesome';
 @import 'modules/typography';
 @import 'modules/social-media';
+@import 'modules/fontawesome-anchor-helpers';
 @import 'modules/animate';
 
 /*** Delete the following. Disposable styling for the included homepage (layouts/index.html) in Hugo-starter.***/
@@ -39,8 +40,7 @@
 
 .site-footer {
     position: absolute;
-    @include fill-parent;
-    @include outer-container();
+    width:100%;
     height: $footer-height;
     left: 0px;
     bottom: 0px;
@@ -64,21 +64,46 @@ span.dropcap {
     font-family: Georgia;
 }
 
-// article {
-//     a[target="_blank"]:after {
-//         font-family: "FontAwesome";
-//         content: "\f08e";
-//         color: inherit;
-//         margin-left: 5px;
-//         font-weight: 100;
-//     }
-// }
-// article {
-//     a[href$="pdf"]:after {
-//         font-family: "FontAwesome";
-//         content: "\f1c1";
-//         color: red;
-//         margin-left: 5px;
-//         font-weight: 100;
-//     }
-// }
+aside.social-share {
+    width:100%;
+    float:right;
+    text-align:center;
+    h5 {
+        font-size:.7em;
+        display:inline;
+        text-align:center;
+        font-weight:100;
+        color:lighten($base-font-color,35%);
+    }
+    ul li {
+        display: inline;
+        margin:5px;
+    }
+}
+
+ul.article-tags {
+    display:inline;
+    li {
+        display:inline;
+        a{
+            font-weight:normal;
+            color:white;
+            background-color:$base-font-color;
+            padding:3px;
+        }
+    }
+}
+
+svg.icon {
+    max-width: 2rem;
+    max-height: 2rem;
+    padding: 0px;
+    border: none;
+    border-radius:5px;
+}
+
+ul.site-footer-social {
+    li {
+        display: inline;
+    }
+}

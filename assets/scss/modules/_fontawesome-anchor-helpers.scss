@@ -1,0 +1,56 @@
+// Helper styles for Font Awesome Anchors and icons based on specific file types.
+// 
+// Requires $include-font-awesome be set to "true" in _variables.scss
+@if $include-font-awesome {
+    main {
+        a[target="_blank"]:not(.share-button):after {
+            font-family: "FontAwesome";
+            content: "\f08e";
+            color: inherit;
+            margin-left: 5px;
+            font-weight: normal;
+        }
+    }
+    main {
+        a[href$="pdf"]:not(.share-button):after {
+            font-family: "FontAwesome";
+            content: "\f1c1";
+            color: $pdf;
+            margin-left: 5px;
+            font-weight: normal;
+        }
+    }
+    main {
+        a[href$="xlsx"]:not(.share-button),
+        a[href$="xls"]:not(.share-button) {
+            &:after {
+                font-family: "FontAwesome";
+                content: "\f1c3";
+                color: $excel;
+                margin-left: 5px;
+                font-weight: normal;
+            }
+        }
+    }
+    main {
+        a[href$="doc"]:not(.share-button),
+        a[href$="docx"]:not(.share-button) {
+            &:after {
+                font-family: "FontAwesome";
+                content: "\f1c2";
+                color: $word;
+                margin-left: 5px;
+                font-weight: normal;
+            }
+        }
+    }
+    main {
+        a[target="_blank"]:not(.share-button):after {
+            font-family: "FontAwesome";
+            content: "\f08e";
+            color: $anchor-color;
+            margin-left: 5px;
+            font-weight: normal;
+        }
+    }
+}

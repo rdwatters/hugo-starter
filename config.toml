@@ -29,7 +29,8 @@ watch = true
   singletons = "/:title/"
 
 [params]
-	AuthorName = ""
+	SiteAuthor = ""
+  TwitterHandle = "ryandwatters"
   #######BEGIN SOCIAL#######
   # For each social account, use the full URL that leads to the homepage of your account/profile
 	GitHub = "https://github.com"
@@ -46,18 +47,20 @@ watch = true
   GoogleAnalyticsTrackingId = ""
   #######END SOCIAL#######
   # The Copyright Year is Automatically Generated based on {{ .Site.LastChange }} and is included in layouts/partials/global_foot/site_copyright.html
-  CopyrightLine = ""
+  CopyrightLine = "Ryan D Watters, ELS"
   SiteDescription = "This is a Hugo starter kit developed by Ryan Watters, https://www.github.com/rdwatters"
   # If true, site style will be embedded in a <style> tag in each html <head> by pulling in "style-embed-for-crp-only.html" partial created by default as part of the Gulp Build. If set to false, the css is not embedded in each page but instead includes an external call to <link rel="stylesheet" href="{{.Site.BaseURL}}/css/style.min.css"> 
   UseCRP = false
   # Include the jQuery CDN in the <head> of your site?
-  IncludeJQ = true
+  IncludeJQ = false
   # There are two conditions that need to be met in order for Disqus comments to be added to a page. Keeping a site variable allows you to turn off all Disqus comments at once, whereas "comments:" set to "true" or "false" on an individual markdown file allows you more granular control at the article level. The partial (layouts/partials/disqus_comments.html) is written such that localhost will not load comments during development.  
   UseDisqus = true
   disqusShortname = ""
   SitePublishDate = "2016-01-01"
   # Setting this to true will include Swiftype Metadata in <head> and the default single.html <article> in layouts/_default
   Swiftype = true
+  primary = "indigo"
+  secondary = "amber"
 
 [blackfriday]
 	plainIDAnchors = true

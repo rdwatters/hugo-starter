@@ -1,3 +1,4 @@
+{{if .Site.Params.Swiftype }}
 <meta class="swiftype" name="title" data-type="string" content="{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}" />
 <meta class="swiftype" name="url" data-type="enum" content="{{ .Permalink }}" />
 <meta class='swiftype' name='image' data-type='enum' content='{{if .Params.image }}{{.Site.BaseURL}}/images/{{.Params.image}}{{else}}{{.Site.BaseURL}}/images/site-logo.png{{end}}' />
@@ -8,4 +9,5 @@
 	{{ range .Params.tags }}
 	<meta class="swiftype" name="tags" data-type="string" content="{{.}}" />
 	{{ end }}
+{{ end }}
 {{ end }}

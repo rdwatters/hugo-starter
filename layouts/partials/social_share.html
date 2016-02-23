@@ -1,0 +1,9 @@
+<aside class="social-share">
+	<h5>Share</h5>
+	<ul>
+		<li><a class="share-button" title="Share {{.Title}} on Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink}}">{{partial "svg_icons/facebook-circle-icon.svg"}}</a></li>
+		<li><a class="share-button" title="Tweet {{.Title}} on Twitter" href="https://twitter.com/share?text={{.Title}}%20by%20@{{.Site.Params.TwitterHandle}}%20via%20{{.Site.Title}}">{{partial "svg_icons/twitter-circle-icon.svg"}}</a></li>
+		<li><a class="share-button" title="Share {{.Title}} on Google Plus" href="https://plus.google.com/share?url={{.Permalink}}">{{partial "svg_icons/googleplus-circle-icon.svg"}}</a></li>
+		<li><a class="share-button" title="Share {{.Title }} via email." href="mailto:?subject={{.Title}}%20from%20{{.Site.Title}}&body=Check%20out%20what%20I%20found%20on%20{{.Site.Title}}:%20{{.Permalink}}">{{partial "svg_icons/email-circle-icon.svg"}}</a></li>
+	</ul>
+</aside>

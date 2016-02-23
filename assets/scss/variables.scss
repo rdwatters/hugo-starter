@@ -1,44 +1,66 @@
-//LAYOUT - See modules/_layout.scss for mixins
-//https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
-$M:668px; // This begins the tablet size. iPhone 6/6s portrait max width = 375px, landscape max width = 667px; iPhone 6+/6+s portrait max width = 414px, landscape max width = 736px
-$L:1025px; // This begins the desktop size. iPad mini/3/4 portrait width = 768px, landscape width = 1024px; 
-$XL:1200px; // Use this for extra-large screens
+/*Contents
 
-//COLOR PALETTE
+Media Queries -
+Colors -
+Typography - 
+
+*/
+
+
+/***************MEDIA QUERIES*****************/
+//https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+// Begin tablet. iPhone 6/6s portrait max width = 375px, landscape max width = 667px; iPhone 6+/6+s portrait max width = 414px, landscape max width = 736px
+$M:668px; 
+// Begin desktop. iPad mini/3/4 portrait width = 768px, landscape width = 1024px; 
+$L:1025px;
+// Use this for extra-large screens 
+$XL:1200px; 
+
+/****************COLORS***********************/
+//PALETTE
 $brand: #2A2C39;
 $brand-two: #51B3FE;
 $brand-three: #013B68;
-$accent-color: #903;
 $button-color: $brand;
 $warning-color: #66101F;
+$accent-color: lighten($warning-color,10%);
 $white:#ffffff;
 $black:#000000;
+$pdf: #ff0000; // Adobe Red
+$excel: #008000; // Microsoft Excel Green
+$word: #2A5699; // Microsoft Word Blue
+
 
 //ANCHORS
-$anchor-color:#000000;
+$anchor-color:$brand;
 $anchor-weight:bold;
 $anchor-transition:0.3s;
 
-// BODY 
-$body-background:#fafafa;
-$footer-height:80px;
+//Body 
+$body-background:$white;
 
-// TYPOGRAPHY
-// See comments in /assets/scss/modules/_font-face.scss for naming conventions 
-// Included fonts = abrilfatface, fontawesome, lato, merriweather, montserrat, notoserif, opensans, playfairdisplay, pnov, ptsans, raleway, roboto, sourcesanspro, and ubuntu
-$font: "raleway";
-$include-second-font: false;//This needs to be set to true to include the following value
+/*************TYPOGRAPHY**********************/
+
+// FONT FAMILIES
+// See /gulp/scss/modules/_font-face.scss for conventions  
+// Font Options: abrilfatface, josefinsans, lato, leaguegothic, merriweather, montserrat, notoserif, opensans, playfairdisplay, ptsans, raleway, roboto, sourcesanspro, ubuntu
+$use-font-face-module: true; //Set to true to include @font-face declarations for $font
+$include-second-font: false; //Set to true to include @font-face declarations for $second-font
+$include-font-awesome: true; //Set to true to include @font-face declarations for FontAwesome
+$font: "pnov";
 $second-font: "abrilfatface";
-$base-font-size: 18px; //This sets your REM value for all HTML
-$base-font-family: $font,'helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-family: $font, 'helvetica Neue', Helvetica, sans-serif;
+
+// Font Base
+$base-font-size: 18px; //Sets your 1 REM value
 $base-font-weight: 400;
-$base-font-color: #333333;
+$base-font-color: #4a4a4a;
 $base-line-height: 1.5;
 
 //HEADINGS
 $heading-font-family: $base-font-family;
 $heading-font-color: $base-font-color;
-$heading-font-weight: 700;
+$heading-font-weight: 200;
 
 //Heading Text Transforms
 $h1-text-transform:none;
@@ -47,7 +69,7 @@ $h3-text-transform:none;
 $h4-text-transform:none;
 $h5-text-transform:none;
 
-//Heading Font Sizes (1 rem = $base-font-size [above])
+//Heading Font Sizes (1 rem = $base-font-size; )
 $h1-sm-screen:1.8rem;
 $h1-m-screen:2.2rem;
 $h1-l-screen:2.5rem;
@@ -66,9 +88,11 @@ $h5-l-screen:1.3rem;
 
 //Blockquotes
 $blockquote-bg:darken($body-background,10%);
+$blockquote-background:darken($body-background,10%);
 $blockquote-left-border:3px solid $brand;
 $blockquote-font-size: 1.2em;
 $blockquote-font-family: $base-font-family;
 
 //Search
-$input-placeholder-text-color:lighten($base-font-color,45%);
+$input-placeholder-text-color:$black;
+$footer-height:80px;

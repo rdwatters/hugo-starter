@@ -12,8 +12,6 @@ comments: true
 generatePage: false
 ---
 
-### Sample Content Heading
-
 Showing Nathan how we can use Wercker and an SSG to automate HTML snippet creation for UCM. Here is a [link to a pdf](/my-random-pdf-filename.pdf). Here is some more content after the sentence with the inline pdf link.
 
 

@@ -1,0 +1,6 @@
+<svg enable-background="new 0 0 128 128" height="128px" id="facebook-square-icon" class="facebook square icon" version="1.1" viewBox="0 0 128 128" width="128px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g>
+        <rect height="128" width="128" />
+    </g>
+    <path d="M68.877,128V78.188h-17.78V60.425h17.784V44.029c0-16.537,9.764-26.279,24.514-26.279  c7.068,0,12.834,0.756,14.605,0.991v18.573l-11.874-0.005c-8.022,0-9.523,3.979-9.523,9.572v13.544h20.556l-2.904,17.763H86.603V128  H68.877z" fill="#FFFFFF" />
+</svg>
