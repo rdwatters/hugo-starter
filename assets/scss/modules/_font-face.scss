@@ -1,5 +1,5 @@
 /******
-Jekyll Starter, copyright 2016, Ryan Watters. MIT License.
+Hugo Starter, copyright 2016, Ryan Watters. MIT License.
 
 To use your own fonts, add files to /assets/css/fonts/fontname/
 To leverage the flexibility of changing the font in variables.scss, you will need to follow a naming convention for the font you are using, for example - 
@@ -14,7 +14,7 @@ Since not all fonts might include the full range of weights, check your console 
 **NOTE:**Some of the fonts included in this Jekyll Starter kit do not include all of these weights. To avoid console errors, you may want to remove any weights/styles that are not included in the font family you are trying to use.
 NOTE: FontAwesome is kept pascal case to reflect same casing in fontawesome sass library.
 ******/
-    
+
 @if $use-font-face-module {
     @font-face {
         font-family: "#{$font}";
@@ -215,12 +215,24 @@ NOTE: FontAwesome is kept pascal case to reflect same casing in fontawesome sass
         }
     }
 }
+
 //FONT AWESOME
 @if $include-font-awesome {
     @font-face {
         font-family: 'FontAwesome';
         src: url('/assets/css/fonts/fontawesome/fontawesome-webfont.eot?v=4.5.0');
         src: url('/assets/css/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('/assets/css/fonts/fontawesome/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), url('/assets/css/fonts/fontawesome/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('/assets/css/fonts/fontawesome/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('/assets/css/fonts/fontawesome/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+//OPEN-ICON https://useiconic.com/open/
+@if $include-open-iconic {
+    @font-face {
+        font-family: 'Icons';
+        src: url('/assets/css/fonts/openicon/open-iconic.eot');
+        src: url('/assets/css/fonts/openicon/open-iconic.eot?#iconic-sm') format('embedded-opentype'), url('/assets/css/fonts/openicon/open-iconic.woff') format('woff'), url('/assets/css/fonts/openicon/open-iconic.ttf') format('truetype'), url('/assets/css/fonts/openicon/open-iconic.otf') format('opentype'), url('/assets/css/fonts/openicon/open-iconic.svg#iconic-sm') format('svg');
         font-weight: normal;
         font-style: normal;
     }

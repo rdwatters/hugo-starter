@@ -1,4 +1,4 @@
-/*This IIFE takes all anchors on the page and add target="_blank" to any anchors to print documents (pdf, docx, etc) or external links.
+/*This IIFE takes all anchors on the page and adds a target="_blank" attribute to all anchors to print documents (pdf, docx, etc) or external sites.
 */
 (function targetBlank() {
   // remove subdomain of current site's url and setup regex

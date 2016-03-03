@@ -17,8 +17,10 @@ $L:1025px;
 $XL:1200px; 
 
 /****************COLORS***********************/
-//PALETTE
-$brand: #2A2C39;
+//CAP PALETTE
+
+//Site Color Palette
+$brand: #01589B;
 $brand-two: #51B3FE;
 $brand-three: #013B68;
 $button-color: $brand;
@@ -47,6 +49,7 @@ $body-background:$white;
 $use-font-face-module: true; //Set to true to include @font-face declarations for $font
 $include-second-font: false; //Set to true to include @font-face declarations for $second-font
 $include-font-awesome: true; //Set to true to include @font-face declarations for FontAwesome
+$include-open-iconic: true; //Set to true to include @font-face declarations for Open-Iconic icons
 $font: "pnov";
 $second-font: "abrilfatface";
 $base-font-family: $font, 'helvetica Neue', Helvetica, sans-serif;

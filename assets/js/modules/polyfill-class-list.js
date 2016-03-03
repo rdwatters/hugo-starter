@@ -1,27 +1,8 @@
-//es2015 extra string methods *not* transpiled with Babel
-if (!String.prototype.startsWith) {
-  String.prototype.startsWith = function(searchString, position) {
-    position = position || 0;
-    return this.indexOf(searchString, position) === position;
-  };
-}
-if (!String.prototype.includes) {
-  String.prototype.includes = function() {'use strict';
-    return String.prototype.indexOf.apply(this, arguments) !== -1;
-  };
-}
-if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function(searchString, position) {
-      var subjectString = this.toString();
-      if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
-        position = subjectString.length;
-      }
-      position -= searchString.length;
-      var lastIndex = subjectString.indexOf(searchString, position);
-      return lastIndex !== -1 && lastIndex === position;
-  };
-}
-//http://purl.eligrey.com/github/classList.js/blob/master/classList.js
+/*
+ClassList.js Polyfill
+Allows for .classList methods in browsers that lack native support (ie, <= IE9)
+https://github.com/eligrey/classList.js/
+*/
 
 if ("document" in self && !("classList" in document.createElement("_"))) {
     (function(j) {
@@ -35,7 +16,8 @@ if ("document" in self && !("classList" in document.createElement("_"))) {
             b = Object,
             k = String[f].trim || function() {
                 return this.replace(/^\s+|\s+$/g, "")
-            }, c = Array[f].indexOf || function(q) {
+            },
+            c = Array[f].indexOf || function(q) {
                 var p = 0,
                     o = this.length;
                 for (; p < o; p++) {
@@ -44,11 +26,13 @@ if ("document" in self && !("classList" in document.createElement("_"))) {
                     }
                 }
                 return -1
-            }, n = function(o, p) {
+            },
+            n = function(o, p) {
                 this.name = o;
                 this.code = DOMException[o];
                 this.message = p
-            }, g = function(p, o) {
+            },
+            g = function(p, o) {
                 if (o === "") {
                     throw new n("SYNTAX_ERR", "An invalid or illegal string was specified")
                 }
@@ -56,7 +40,8 @@ if ("document" in self && !("classList" in document.createElement("_"))) {
                     throw new n("INVALID_CHARACTER_ERR", "String contains an invalid character")
                 }
                 return c.call(p, o)
-            }, d = function(s) {
+            },
+            d = function(s) {
                 var r = k.call(s.getAttribute("class") || ""),
                     q = r ? r.split(/\s+/) : [],
                     p = 0,
@@ -67,7 +52,8 @@ if ("document" in self && !("classList" in document.createElement("_"))) {
                 this._updateClassName = function() {
                     s.setAttribute("class", this.toString())
                 }
-            }, e = d[f] = [],
+            },
+            e = d[f] = [],
             i = function() {
                 return new d(this)
             };
