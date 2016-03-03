@@ -8,7 +8,7 @@ build:
   - script:
     name: echo "Moving json/index.html to json/site-index.json"
     code: |
-      cd public/json/ && cp index.html site-index.json
+      cd public/json/ && cp index.html ../site-index.json
 deploy:
   steps:
     - install-packages:
